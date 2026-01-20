@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Full Pinyin Chart</title>
+<style>
+body {
+  margin: 0;
+  padding: 0;              /* ❗️ убираем отступы */
+  font-family: Arial, sans-serif;
+  background: #0f1729;
+  color: #c8cad0;
+  overflow: auto;          /* ❗️ скролл всегда у окна */
+}
+
+.table-wrap {
+  width: 100%;
+  padding: 0;              /* ❗️ убираем внутренние отступы */
+  margin: 0;
+  overflow: visible;       /* оставляем, но без скролла */
+}
+table {
+  border-collapse: collapse;
+  min-width: 1400px;
+  margin: 0;               /* ❗️ убираем auto */
+}
+th, td {
+  border: 1px solid #c8cad0;
+  padding: 6px;
+  text-align: center;
+  font-size: 15px;
+}
+th {
+  background: #0f1729;
+}
+.cell span {
+  display: inline-block;
+  padding: 2px 4px;
+  margin: 1px;
+  cursor: pointer;
+  border-radius: 3px;
+}
+.cell span:hover {
+  background: #2563eb;
+  color: #c8cad0;
+}
+td.empty {
+  background: #c8cad0;
+}
+</style>
+</head>
+<body>
+<div class="table-wrap">
+<table>
+<tr>
+  <th></th>
+  <th>a</th><th></th><th></th><th></th><th></th><th>o</th><th></th><th></th><th>e</th><th></th><th></th><th></th><th></th><th>i</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>u</th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th></th><th>ü</th><th></th><th></th><th></th>
+</tr>
+<tr>
+  <th></th>
+  <th>a</th><th>ai</th><th>ao</th><th>an</th><th>ang</th><th>o</th><th>ong</th><th>ou</th><th>e</th><th>ei</th><th>en</th><th>eng</th><th>er</th><th>i</th><th>ia</th><th>iao</th><th>ie</th><th>iou</th><th>ian</th><th>iang</th><th>in</th><th>ing</th><th>iong</th><th>u</th><th>ua</th><th>uo</th><th>ui</th><th>uai</th><th>uan</th><th>un</th><th>uang</th><th>ueng</th><th>ü</th><th>üe</th><th>üan</th><th>ün</th>
+</tr>
+
+<!-- Блок примера ряда "b" -->
+<th>-</th>
+<td class="cell"><span data-s="a1">ā</span><span data-s="a2">á</span><span data-s="a3">ǎ</span><span data-s="a4">à</span></td>
+<td class="cell"><span data-s="ai1">āi</span><span data-s="ai2">ái</span><span data-s="ai3">ǎi</span><span data-s="ai4">ài</span></td>
+<td class="cell"><span data-s="ao1">āo</span><span data-s="ao2">áo</span><span data-s="ao3">ǎo</span><span data-s="ao4">ào</span></td>
+<td class="cell"><span data-s="an1">ān</span><span data-s="an2">án</span><span data-s="an3">ǎn</span><span data-s="an4">àn</span></td>
+<td class="cell"><span data-s="ang1">āng</span><span data-s="ang2">áng</span><span data-s="ang3">ǎng</span><span data-s="ang4">àng</span></td>
+<td class="cell"><span data-s="o1">ō</span><span data-s="o2">ó</span><span data-s="o3">ǒ</span><span data-s="o4">ò</span></td>
+<td class="cell"><span data-s="ong1">ōng</span><span data-s="ong2">óng</span><span data-s="ong3">ǒng</span><span data-s="ong4">òng</span></td>
+<td class="cell"><span data-s="ou1">ōu</span><span data-s="ou2">óu</span><span data-s="ou3">ǒu</span><span data-s="ou4">òu</span></td>
+<td class="cell"><span data-s="e1">ē</span><span data-s="e2">é</span><span data-s="e3">ě</span><span data-s="e4">è</span></td>
+<td class="cell"><span data-s="ei1">ēi</span><span data-s="ei2">éi</span><span data-s="ei3">ěi</span><span data-s="ei4">èi</span></td>
+<td class="cell"><span data-s="en1">ēn</span><span data-s="en2">én</span><span data-s="en3">ěn</span><span data-s="en4">èn</span></td>
+<td class="cell"><span data-s="eng1">ēng</span><span data-s="eng2">éng</span><span data-s="eng3">ěng</span><span data-s="eng4">èng</span></td>
+<td class="cell"><span data-s="er1">ēr</span><span data-s="er2">ér</span><span data-s="er3">ěr</span><span data-s="er4">èr</span></td>
+<td class="cell"><span data-s="i1">yī</span><span data-s="i2">yí</span><span data-s="i3">yǐ</span><span data-s="i4">yì</span></td>
+<td class="cell"><span data-s="ia1">yā</span><span data-s="ia2">yá</span><span data-s="ia3">yǎ</span><span data-s="ia4">yà</span></td>
+<td class="cell"><span data-s="iao1">iāo</span><span data-s="iao2">iáo</span><span data-s="iao3">iǎo</span><span data-s="iao4">iào</span></td>
+<td class="cell"><span data-s="ie1">iē</span><span data-s="ie2">ié</span><span data-s="ie3">iě</span><span data-s="ie4">iè</span></td>
+<td class="cell"><span data-s="iu1">iū</span><span data-s="iu2">iú</span><span data-s="iu3">iǔ</span><span data-s="iu4">iù</span></td>
+<td class="cell"><span data-s="ian1">iān</span><span data-s="ian2">ián</span><span data-s="ian3">iǎn</span><span data-s="ian4">iàn</span></td>
+<td class="cell"><span data-s="iang1">iāng</span><span data-s="iang2">iáng</span><span data-s="iang3">iǎng</span><span data-s="iang4">iàng</span></td>
+<td class="cell"><span data-s="in1">īn</span><span data-s="in2">ín</span><span data-s="in3">ǐn</span><span data-s="in4">ìn</span></td>
+<td class="cell"><span data-s="ing1">īng</span><span data-s="ing2">íng</span><span data-s="ing3">ǐng</span><span data-s="ing4">ìng</span></td>
+<td class="cell"><span data-s="iong1">iōng</span><span data-s="iong2">ióng</span><span data-s="iong3">iǒng</span><span data-s="iong4">iòng</span></td>
+<td class="cell"><span data-s="u1">ū</span><span data-s="u2">ú</span><span data-s="u3">ǔ</span><span data-s="u4">ù</span></td>
+<td class="cell"><span data-s="ua1">uā</span><span data-s="ua2">uá</span><span data-s="ua3">uǎ</span><span data-s="ua4">uà</span></td>
+<td class="cell"><span data-s="uo1">uō</span><span data-s="uo2">uó</span><span data-s="uo3">uǒ</span><span data-s="uo4">uò</span></td>
+<td class="cell"><span data-s="ui1">uī</span><span data-s="ui2">uí</span><span data-s="ui3">uǐ</span><span data-s="ui4">uì</span></td>
+<td class="cell"><span data-s="uai1">uāi</span><span data-s="uai2">uái</span><span data-s="uai3">uǎi</span><span data-s="uai4">uài</span></td>
+<td class="cell"><span data-s="uan1">uān</span><span data-s="uan2">uán</span><span data-s="uan3">uǎn</span><span data-s="uan4">uàn</span></td>
+<td class="cell"><span data-s="un1">ūn</span><span data-s="un2">ún</span><span data-s="un3">ǔn</span><span data-s="un4">ùn</span></td>
+<td class="cell"><span data-s="uang1">uāng</span><span data-s="uang2">uáng</span><span data-s="uang3">uǎng</span><span data-s="uang4">uàng</span></td>
+<td class="cell"><span data-s="ueng1">uēng</span><span data-s="ueng2">uéng</span><span data-s="ueng3">uěng</span><span data-s="ueng4">uèng</span></td>
+<td class="cell"><span data-s="u1">ū</span><span data-s="u2">ú</span><span data-s="u3">ǔ</span><span data-s="u4">ù</span></td>
+<td class="cell"><span data-s="ue1">uē</span><span data-s="ue2">ué</span><span data-s="ue3">uě</span><span data-s="ue4">uè</span></td>
+<td class="cell"><span data-s="uan1">uān</span><span data-s="uan2">uán</span><span data-s="uan3">uǎn</span><span data-s="uan4">uàn</span></td>
+<td class="cell"><span data-s="un1">ūn</span><span data-s="un2">ún</span><span data-s="un3">ǔn</span><span data-s="un4">ùn</span></td>
+<tr>
+<th>b</th>
+<td class="cell"><span data-s="ba1">bā</span><span data-s="ba2">bá</span><span data-s="ba3">bǎ</span><span data-s="ba4">bà</span></td>
+<td class="cell"><span data-s="bai1">bāi</span><span data-s="bai2">bái</span><span data-s="bai3">bǎi</span><span data-s="bai4">bài</span></td>
+<td class="cell"><span data-s="bao1">bāo</span><span data-s="bao2">báo</span><span data-s="bao3">bǎo</span><span data-s="bao4">bào</span></td>
+<td class="cell"><span data-s="ban1">bān</span><span data-s="ban2">bán</span><span data-s="ban3">bǎn</span><span data-s="ban4">bàn</span></td>
+<td class="cell"><span data-s="bang1">bāng</span><span data-s="bang2">báng</span><span data-s="bang3">bǎng</span><span data-s="bang4">bàng</span></td>
+<td class="cell"><span data-s="bo1">bō</span><span data-s="bo2">bó</span><span data-s="bo3">bǒ</span><span data-s="bo4">bò</span></td>
+<td class="cell"><span data-s="bong1">bōng</span><span data-s="bong2">bóng</span><span data-s="bong3">bǒng</span><span data-s="bong4">bòng</span></td>
+<td class="cell"><span data-s="bou1">bōu</span><span data-s="bou2">bóu</span><span data-s="bou3">bǒu</span><span data-s="bou4">bòu</span></td>
+<td class="cell"><span data-s="be1">bē</span><span data-s="be2">bé</span><span data-s="be3">bě</span><span data-s="be4">bè</span></td>
+<td class="cell"><span data-s="bei1">bēi</span><span data-s="bei2">béi</span><span data-s="bei3">běi</span><span data-s="bei4">bèi</span></td>
+<td class="cell"><span data-s="ben1">bēn</span><span data-s="ben2">bén</span><span data-s="ben3">běn</span><span data-s="ben4">bèn</span></td>
+<td class="cell"><span data-s="beng1">bēng</span><span data-s="beng2">béng</span><span data-s="beng3">běng</span><span data-s="beng4">bèng</span></td>
+<th> </th>
+<td class="cell"><span data-s="bi1">bī</span><span data-s="bi2">bí</span><span data-s="bi3">bǐ</span><span data-s="bi4">bì</span></td>
+<td class="cell"><span data-s="bia1">biā</span><span data-s="bia2">biá</span><span data-s="bia3">biǎ</span><span data-s="bia4">bià</span></td>
+<td class="cell"><span data-s="biao1">biāo</span><span data-s="biao2">biáo</span><span data-s="biao3">biǎo</span><span data-s="biao4">biào</span></td>
+<td class="cell"><span data-s="bie1">biē</span><span data-s="bie2">bié</span><span data-s="bie3">biě</span><span data-s="bie4">biè</span></td>
+<td class="cell"><span data-s="bi1">bī</span><span data-s="bi2">bí</span><span data-s="bi3">bǐ</span><span data-s="bi4">bì</span></td>
+<td class="cell"><span data-s="bian1">biān</span><span data-s="bian2">bián</span><span data-s="bian3">biǎn</span><span data-s="bian4">biàn</span></td>
+<td class="cell"><span data-s="biao1">biāo</span><span data-s="biao2">biáo</span><span data-s="biao3">biǎo</span><span data-s="biao4">biào</span></td>
+<td class="cell"><span data-s="bie1">biē</span><span data-s="bie2">bié</span><span data-s="bie3">biě</span><span data-s="bie4">biè</span></td>
+<td class="cell"><span data-s="bin1">bīn</span><span data-s="bin2">bín</span><span data-s="bin3">bǐn</span><span data-s="bin4">bìn</span></td>
+<td class="cell"><span data-s="bing1">bīng</span><span data-s="bing2">bíng</span><span data-s="bing3">bǐng</span><span data-s="bing4">bìng</span></td>
+<td class="cell"><span data-s="bu1">bū</span><span data-s="bu2">bú</span><span data-s="bu3">bǔ</span><span data-s="bu4">bù</span></td>
+<th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th>
+<tr>
+<th>p</th>
+<td class="cell"><span data-s="pa1">pā</span><span data-s="pa2">pá</span><span data-s="pa3">pǎ</span><span data-s="pa4">pà</span></td>
+<td class="cell"><span data-s="pai1">pāi</span><span data-s="pai2">pái</span><span data-s="pai3">pǎi</span><span data-s="pai4">pài</span></td>
+<td class="cell"><span data-s="pan1">pān</span><span data-s="pan2">pán</span><span data-s="pan3">pǎn</span><span data-s="pan4">pàn</span></td>
+<td class="cell"><span data-s="pang1">pāng</span><span data-s="pang2">páng</span><span data-s="pang3">pǎng</span><span data-s="pang4">pàng</span></td>
+<td class="cell"><span data-s="pao1">pāo</span><span data-s="pao2">páo</span><span data-s="pao3">pǎo</span><span data-s="pao4">pào</span></td>
+<td class="cell"><span data-s="po1">pō</span><span data-s="po2">pó</span><span data-s="po3">pǒ</span><span data-s="po4">pò</span></td>
+<th> </th><th> </th><th> </th>
+<td class="cell"><span data-s="pei1">pēi</span><span data-s="pei2">péi</span><span data-s="pei3">pěi</span><span data-s="pei4">pèi</span></td>
+<td class="cell"><span data-s="pen1">pēn</span><span data-s="pen2">pén</span><span data-s="pen3">pěn</span><span data-s="pen4">pèn</span></td>
+<td class="cell"><span data-s="peng1">pēng</span><span data-s="peng2">péng</span><span data-s="peng3">pěng</span><span data-s="peng4">pèng</span></td>
+<th> </th>
+<td class="cell"><span data-s="pi1">pī</span><span data-s="pi2">pí</span><span data-s="pi3">pǐ</span><span data-s="pi4">pì</span></td>
+<th> </th>
+<td class="cell"><span data-s="piao1">piāo</span><span data-s="piao2">piáo</span><span data-s="piao3">piǎo</span><span data-s="piao4">piào</span></td>
+<td class="cell"><span data-s="pie1">piē</span><span data-s="pie2">pié</span><span data-s="pie3">piě</span><span data-s="pie4">piè</span></td>
+<th> </th>
+<td class="cell"><span data-s="pian1">piān</span><span data-s="pian2">pián</span><span data-s="pian3">piǎn</span><span data-s="pian4">piàn</span></td>
+<th> </th><th> </th>
+<td class="cell"><span data-s="pin1">pīn</span><span data-s="pin2">pín</span><span data-s="pin3">pǐn</span><span data-s="pin4">pìn</span></td>
+<td class="cell"><span data-s="ping1">pīng</span><span data-s="ping2">píng</span><span data-s="ping3">pǐng</span><span data-s="ping4">pìng</span></td>
+<td class="cell"><span data-s="pu1">pū</span><span data-s="pu2">pú</span><span data-s="pu3">pǔ</span><span data-s="pu4">pù</span></td>
+<th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th>
+<tr>
+<th>m</th>
+<td class="cell"><span data-s="ma1">mā</span><span data-s="ma2">má</span><span data-s="ma3">mǎ</span><span data-s="ma4">mà</span></td>
+<td class="cell"><span data-s="mai1">māi</span><span data-s="mai2">mái</span><span data-s="mai3">mǎi</span><span data-s="mai4">mài</span></td>
+<td class="cell"><span data-s="mao1">māo</span><span data-s="mao2">máo</span><span data-s="mao3">mǎo</span><span data-s="mao4">mào</span></td>
+<td class="cell"><span data-s="man1">mān</span><span data-s="man2">mán</span><span data-s="man3">mǎn</span><span data-s="man4">màn</span></td>
+<td class="cell"><span data-s="mang1">māng</span><span data-s="mang2">máng</span><span data-s="mang3">mǎng</span><span data-s="mang4">màng</span></td>
+<td class="cell"><span data-s="mo1">mō</span><span data-s="mo2">mó</span><span data-s="mo3">mǒ</span><span data-s="mo4">mò</span></td>
+<th> </th><th> </th>
+<td class="cell"><span data-s="me1">me</span><span data-s="me2">mé</span><span data-s="me3">mě</span><span data-s="me4">mè</span></td>
+<td class="cell"><span data-s="mei1">mēi</span><span data-s="mei2">méi</span><span data-s="mei3">měi</span><span data-s="mei4">mèi</span></td>
+<td class="cell"><span data-s="men1">mēn</span><span data-s="men2">mén</span><span data-s="men3">měn</span><span data-s="men4">mèn</span></td>
+<td class="cell"><span data-s="meng1">mēng</span><span data-s="meng2">méng</span><span data-s="meng3">měng</span><span data-s="meng4">mèng</span></td>
+<th> </th>
+<td class="cell"><span data-s="mi1">mī</span><span data-s="mi2">mí</span><span data-s="mi3">mǐ</span><span data-s="mi4">mì</span></td>
+<th> </th>
+<td class="cell"><span data-s="miao1">miāo</span><span data-s="miao2">miáo</span><span data-s="miao3">miǎo</span><span data-s="miao4">miào</span></td>
+<td class="cell"><span data-s="mie1">miē</span><span data-s="mie2">mié</span><span data-s="mie3">miě</span><span data-s="mie4">miè</span></td>
+<th> </th>
+<td class="cell"><span data-s="mian1">miān</span><span data-s="mian2">mián</span><span data-s="mian3">miǎn</span><span data-s="mian4">miàn</span></td>
+<th> </th>
+<td class="cell"><span data-s="min1">mīn</span><span data-s="min2">mín</span><span data-s="min3">mǐn</span><span data-s="min4">mìn</span></td>
+<td class="cell"><span data-s="ming1">mīng</span><span data-s="ming2">míng</span><span data-s="ming3">mǐng</span><span data-s="ming4">mìng</span></td>
+<th> </th>
+<td class="cell"><span data-s="mu1">mū</span><span data-s="mu2">mú</span><span data-s="mu3">mǔ</span><span data-s="mu4">mù</span></td>
+<th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th>
+<tr>
+<th>f</th>
+<td class="cell"><span data-s="fa1">fā</span><span data-s="fa2">fá</span><span data-s="fa3">fǎ</span><span data-s="fa4">fà</span></td>
+<th> </th><th> </th>
+<td class="cell"><span data-s="fan1">fān</span><span data-s="fan2">fán</span><span data-s="fan3">fǎn</span><span data-s="fan4">fàn</span></td>
+<td class="cell"><span data-s="fang1">fāng</span><span data-s="fang2">fáng</span><span data-s="fang3">fǎng</span><span data-s="fang4">fàng</span></td>
+<td class="cell"><span data-s="fo1">fó</span></td>
+<th> </th><th> </th><th> </th>
+<td class="cell"><span data-s="fei1">fēi</span><span data-s="fei2">féi</span><span data-s="fei3">fěi</span><span data-s="fei4">fèi</span></td>
+<td class="cell"><span data-s="fen1">fēn</span><span data-s="fen2">fén</span><span data-s="fen3">fěn</span><span data-s="fen4">fèn</span></td>
+<td class="cell"><span data-s="feng1">fēng</span><span data-s="feng2">féng</span><span data-s="feng3">fěng</span><span data-s="feng4">fèng</span></td>
+<th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th>
+<td class="cell"><span data-s="fu1">fū</span><span data-s="fu2">fú</span><span data-s="fu3">fǔ</span><span data-s="fu4">fù</span></td>
+<th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th><th> </th>
+<tr>
+<th>d</th>
+<td class="cell"><span data-s="da1">dā</span><span data-s="da2">dá</span><span data-s="da3">dǎ</span><span data-s="da4">dà</span></td>
+<td class="cell"><span data-s="dai1">dāi</span><span data-s="dai2">dái</span><span data-s="dai3">dǎi</span><span data-s="dai4">dài</span></td>
+<td class="cell"><span data-s="dao1">dāo</span><span data-s="dao2">dáo</span><span data-s="dao3">dǎo</span><span data-s="dao4">dào</span></td>
+<td class="cell"><span data-s="dan1">dān</span><span data-s="dan2">dán</span><span data-s="dan3">dǎn</span><span data-s="dan4">dàn</span></td>
+<td class="cell"><span data-s="dang1">dāng</span><span data-s="dang2">dáng</span><span data-s="dang3">dǎng</span><span data-s="dang4">dàng</span></td>
+<th> </th>
+<td class="cell"><span data-s="dong1">dōng</span><span data-s="dong2">dóng</span><span data-s="dong3">dǒng</span><span data-s="dong4">dòng</span></td>
+<td class="cell"><span data-s="dou1">dōu</span><span data-s="dou2">dóu</span><span data-s="dou3">dǒu</span><span data-s="dou4">dòu</span></td>
+<td class="cell"><span data-s="de1">de</span><span data-s="de2">dé</span><span data-s="de3">dě</span><span data-s="de4">dè</span></td>
+<td class="cell"><span data-s="dei1">děi</span></td><th> </th>
+<td class="cell"><span data-s="deng1">dēng</span><span data-s="deng2">déng</span><span data-s="deng3">děng</span><span data-s="deng4">dèng</span></td>
+<th> </th>
+<td class="cell"><span data-s="di1">dī</span><span data-s="di2">dí</span><span data-s="di3">dǐ</span><span data-s="di4">dì</span></td>
+<td class="cell"><span data-s="dia1"> </span></td>
+<td class="cell"><span data-s="diao1">diāo</span><span data-s="diao2">diáo</span><span data-s="diao3">diǎo</span><span data-s="diao4">diào</span></td>
+<td class="cell"><span data-s="die1">diē</span><span data-s="die2">dié</span><span data-s="die3">diě</span><span data-s="die4">diè</span></td>
+<th> </th>
+<td class="cell"><span data-s="dian1">diān</span><span data-s="dian2">dián</span><span data-s="dian3">diǎn</span><span data-s="dian4">diàn</span></td>
+<th> </th><th> </th><th> </th>
+<td class="cell"><span data-s="ding1">dīng</span><span data-s="ding2">díng</span><span data-s="ding3">dǐng</span><span data-s="ding4">dìng</span></td>
+<td class="cell"><span data-s="du1">dū</span><span data-s="du2">dú</span><span data-s="du3">dǔ</span><span data-s="du4">dù</span></td>
+<th> </th>
+<td class="cell"><span data-s="duo1">duō</span><span data-s="duo2">duó</span><span data-s="duo3">duǒ</span><span data-s="duo4">duò</span></td>
+<td class="cell"><span data-s="dui1">duī</span><span data-s="dui2">duí</span><span data-s="dui3">duǐ</span><span data-s="dui4">duì</span></td>
+<th> </th>
+<td class="cell"><span data-s="duan1">duān</span><span data-s="duan2">duán</span><span data-s="duan3">duǎn</span><span data-s="duan4">duàn</span></td>
+<td class="cell"><span data-s="dun1">dūn</span><span data-s="dun2">dún</span><span data-s="dun3">dǔn</span><span data-s="dun4">dùn</span></td>
+<th> </th><th> </th><th> </th><th> </th><th> </th><th> </th>
+<tr>
+<th>t</th>
+<td class="cell"><span data-s="ta1">tā</span><span data-s="ta2">tá</span><span data-s="ta3">tǎ</span><span data-s="ta4">tà</span></td>
+<td class="cell"><span data-s="tai1">tāi</span><span data-s="tai2">tái</span><span data-s="tai3">tǎi</span><span data-s="tai4">tài</span></td>
+<td class="cell"><span data-s="tao1">tāo</span><span data-s="tao2">táo</span><span data-s="tao3">tǎo</span><span data-s="tao4">tào</span></td>
+<td class="cell"><span data-s="tan1">tān</span><span data-s="tan2">tán</span><span data-s="tan3">tǎn</span><span data-s="tan4">tàn</span></td>
+<td class="cell"><span data-s="tang1">tāng</span><span data-s="tang2">táng</span><span data-s="tang3">tǎng</span><span data-s="tang4">tàng</span></td>
+<td class="cell"><span data-s="to1"> </span></td>
+<td class="cell"><span data-s="tong1">tōng</span><span data-s="tong2">tóng</span><span data-s="tong3">tǒng</span><span data-s="tong4">tòng</span></td>
+<td class="cell"><span data-s="tou1">tōu</span><span data-s="tou2">tóu</span><span data-s="tou3">tǒu</span><span data-s="tou4">tòu</span></td>
+<td class="cell"><span data-s="te1">tē</span><span data-s="te2">té</span><span data-s="te3">tǐ</span><span data-s="te4">tì</span></td>
+<td class="cell"><span data-s="tei1"> </span></td>
+<td class="cell"><span data-s="ten1"> </span></td>
+<td class="cell"><span data-s="teng1">tēng</span><span data-s="teng2">téng</span><span data-s="teng3">těng</span><span data-s="teng4">tèng</span></td>
+<td class="cell"><span data-s="ter1"> </span></td>
+<td class="cell"><span data-s="ti1">tī</span><span data-s="ti2">tí</span><span data-s="ti3">tǐ</span><span data-s="ti4">tì</span></td>
+<td class="cell"><span data-s="tia1"> </span></td>
+<td class="cell"><span data-s="tiao1">tiāo</span><span data-s="tiao2">tiáo</span><span data-s="tiao3">tiǎo</span><span data-s="tiao4">tiào</span></td>
+<td class="cell"><span data-s="tie1">tiē</span><span data-s="tie2">tié</span><span data-s="tie3">tiě</span><span data-s="tie4">tiè</span></td>
+<td class="cell"><span data-s="tiou1"> </span></td>
+<td class="cell"><span data-s="tian1">tiān</span><span data-s="tian2">tián</span><span data-s="tian3">tiǎn</span><span data-s="tian4">tiàn</span></td>
+<td class="cell"><span data-s="tiang1">tiāng</span><span data-s="tiang2">tiáng</span><span data-s="tiang3">tiǎng</span><span data-s="tiang4">tiàng</span></td>
+<td class="cell"><span data-s="tin1">tīn</span><span data-s="tin2">tín</span><span data-s="tin3">tǐn</span><span data-s="tin4">tìn</span></td>
+<td class="cell"><span data-s="ting1">tīng</span><span data-s="ting2">tíng</span><span data-s="ting3">tǐng</span><span data-s="ting4">tìng</span></td>
+<td class="cell"><span data-s="tiong1">tiōng</span><span data-s="tiong2">tióng</span><span data-s="tiong3">tiǒng</span><span data-s="tiong4">tiòng</span></td>
+<td class="cell"><span data-s="tu1">tū</span><span data-s="tu2">tú</span><span data-s="tu3">tǔ</span><span data-s="tu4">tù</span></td>
+<td class="cell"><span data-s="tua1"> </span></td>
+<td class="cell"><span data-s="tuo1">tuō</span><span data-s="tuo2">tuó</span><span data-s="tuo3">tuǒ</span><span data-s="tuo4">tuò</span></td>
+<td class="cell"><span data-s="tui1">tuī</span><span data-s="tui2">tuí</span><span data-s="tui3">tuǐ</span><span data-s="tui4">tuì</span></td>
+<td class="cell"><span data-s="tuai1">tuāi</span><span data-s="tuai2">tuái</span><span data-s="tuai3">tuǎi</span><span data-s="tuai4">tuài</span></td>
+<td class="cell"><span data-s="tuan1">tuān</span><span data-s="tuan2">tuán</span><span data-s="tuan3">tuǎn</span><span data-s="tuan4">tuàn</span></td>
+<td class="cell"><span data-s="tun1">tūn</span><span data-s="tun2">tún</span><span data-s="tun3">tǔn</span><span data-s="tun4">tùn</span></td>
+<td class="cell"><span data-s="tuang1">tuāng</span><span data-s="tuang2">tuáng</span><span data-s="tuang3">tuǎng</span><span data-s="tuang4">tuàng</span></td>
+<td class="cell"><span data-s="tueng1"> </span></td>
+<td class="cell"><span data-s="tü1"> </span></td>
+<td class="cell"><span data-s="tüe1"> </span></td>
+<td class="cell"><span data-s="tüan1"> </span></td>
+<td class="cell"><span data-s="tün1"> </span></td>
+<tr>
+<th>n</th>
+<td class="cell"><span data-s="na1">nā</span><span data-s="na2">ná</span><span data-s="na3">nǎ</span><span data-s="na4">nà</span></td>
+<td class="cell"><span data-s="nai1">nāi</span><span data-s="nai2">nái</span><span data-s="nai3">nǎi</span><span data-s="nai4">nài</span></td>
+<td class="cell"><span data-s="nao1">nāo</span><span data-s="nao2">náo</span><span data-s="nao3">nǎo</span><span data-s="nao4">nào</span></td>
+<td class="cell"><span data-s="nan1">nān</span><span data-s="nan2">nán</span><span data-s="nan3">nǎn</span><span data-s="nan4">nàn</span></td>
+<td class="cell"><span data-s="nang1">nāng</span><span data-s="nang2">náng</span><span data-s="nang3">nǎng</span><span data-s="nang4">nàng</span></td>
+<td class="cell"><span data-s="no1"> </span></td>
+<td class="cell"><span data-s="nong1">nōng</span><span data-s="nong2">nóng</span><span data-s="nong3">nǒng</span><span data-s="nong4">nòng</span></td>
+<td class="cell"><span data-s="nou1"> </span></td>
+<td class="cell"><span data-s="ne1">ne</span><span data-s="ne2">né</span><span data-s="ne3">ně</span><span data-s="ne4">nè</span></td>
+<td class="cell"><span data-s="nei1">něi</span><span data-s="nei2">nèi</span></td>
+<td class="cell"><span data-s="nen1">nēn</span><span data-s="nen2">nén</span><span data-s="nen3">něn</span><span data-s="nen4">nèn</span></td>
+<td class="cell"><span data-s="neng1">néng</span></td>
+<td class="cell"><span data-s="ner1"> </span></td>
+<td class="cell"><span data-s="ni1">nī</span><span data-s="ni2">ní</span><span data-s="ni3">nǐ</span><span data-s="ni4">nì</span></td>
+<td class="cell"><span data-s="nia1"> </span></td>
+<td class="cell"><span data-s="niao1">niāo</span><span data-s="niao2">niáo</span><span data-s="niao3">niǎo</span><span data-s="niao4">niào</span></td>
+<td class="cell"><span data-s="nie1">niē</span><span data-s="nie2">nié</span><span data-s="nie3">niě</span><span data-s="nie4">niè</span></td>
+<td class="cell"><span data-s="niou1"> </span></td>
+<td class="cell"><span data-s="nian1">niān</span><span data-s="nian2">nián</span><span data-s="nian3">niǎn</span><span data-s="nian4">niàn</span></td>
+<td class="cell"><span data-s="niang1">niāng</span><span data-s="niang2">niáng</span><span data-s="niang3">niǎng</span><span data-s="niang4">niàng</span></td>
+<td class="cell"><span data-s="nin1">nīn</span><span data-s="nin2">nín</span><span data-s="nin3">nǐn</span><span data-s="nin4">nìn</span></td>
+<td class="cell"><span data-s="ning1">nīng</span><span data-s="ning2">níng</span><span data-s="ning3">nǐng</span><span data-s="ning4">nìng</span></td>
+<td class="cell"><span data-s="niong1">niōng</span><span data-s="niong2">nióng</span><span data-s="niong3">niǒng</span><span data-s="niong4">niòng</span></td>
+<td class="cell"><span data-s="nu1">nū</span><span data-s="nu2">nú</span><span data-s="nu3">nǔ</span><span data-s="nu4">nù</span></td>
+<td class="cell"><span data-s="nua1"> </span></td>
+<td class="cell"><span data-s="nuo1">nuō</span><span data-s="nuo2">nuó</span><span data-s="nuo3">nuǒ</span><span data-s="nuo4">nuò</span></td>
+<td class="cell"><span data-s="nui1"> </span></td>
+<td class="cell"><span data-s="nuai1">nuāi</span><span data-s="nuai2">nuái</span><span data-s="nuai3">nuǎi</span><span data-s="nuai4">nuài</span></td>
+<td class="cell"><span data-s="nuan1">nuān</span><span data-s="nuan2">nuán</span><span data-s="nuan3">nuǎn</span><span data-s="nuan4">nuàn</span></td>
+<td class="cell"><span data-s="nun1"> </span></td>
+<td class="cell"><span data-s="nuang1">nuāng</span><span data-s="nuang2">nuáng</span><span data-s="nuang3">nuǎng</span><span data-s="nuang4">nuàng</span></td>
+<td class="cell"><span data-s="nueng1"> </span></td>
+<td class="cell"><span data-s="nü1">nǖ</span><span data-s="nü2">nǘ</span><span data-s="nü3">nǚ</span><span data-s="nü4">nǜ</span></td>
+<td class="cell"><span data-s="nüe1">nǖe</span><span data-s="nüe2">nǘe</span><span data-s="nüe3">nǚe</span><span data-s="nüe4">nǜe</span></td>
+<td class="cell"><span data-s="nüan1">nǖan</span><span data-s="nüan2">nǘan</span><span data-s="nüan3">nǚan</span><span data-s="nüan4">nǜan</span></td>
+<td class="cell"><span data-s="nün1">nǖn</span><span data-s="nün2">nǘn</span><span data-s="nün3">nǚn</span><span data-s="nün4">nǜn</span></td>
+<tr>
+<th>I</th>
+<td class="cell"><span data-s="la1">lā</span><span data-s="la2">lá</span><span data-s="la3">lǎ</span><span data-s="la4">là</span></td>
+<td class="cell"><span data-s="lai1">lāi</span><span data-s="lai2">lái</span><span data-s="lai3">lǎi</span><span data-s="lai4">lài</span></td>
+<td class="cell"><span data-s="lao1">lāo</span><span data-s="lao2">láo</span><span data-s="lao3">lǎo</span><span data-s="lao4">lào</span></td>
+<td class="cell"><span data-s="lan1">lān</span><span data-s="lan2">lán</span><span data-s="lan3">lǎn</span><span data-s="lan4">làn</span></td>
+<td class="cell"><span data-s="lang1">lāng</span><span data-s="lang2">láng</span><span data-s="lang3">lǎng</span><span data-s="lang4">làng</span></td>
+<td class="cell"><span data-s="lo1"> </span></td>
+<td class="cell"><span data-s="long1">lōng</span><span data-s="long2">lóng</span><span data-s="long3">lǒng</span><span data-s="long4">lòng</span></td>
+<td class="cell"><span data-s="lou1">lōu</span><span data-s="lou2">lóu</span><span data-s="lou3">lǒu</span><span data-s="lou4">lòu</span></td>
+<td class="cell"><span data-s="le1">le</span><span data-s="le2">·</span><span data-s="le3">lé</span><span data-s="le4">·</span><span data-s="le5">lě</span><span data-s="le6">·</span><span data-s="le7">lè</span></td>
+<td class="cell"><span data-s="lei1">lēi</span><span data-s="lei2">léi</span><span data-s="lei3">lěi</span><span data-s="lei4">lèi</span></td>
+<td class="cell"><span data-s="len1">lēn</span><span data-s="len2">lén</span><span data-s="len3">lěn</span><span data-s="len4">lèn</span></td>
+<td class="cell"><span data-s="leng1">lēng</span><span data-s="leng2">léng</span><span data-s="leng3">lěng</span><span data-s="leng4">lèng</span></td>
+<td class="cell"><span data-s="ler1"> </span></td>
+<td class="cell"><span data-s="li1">lī</span><span data-s="li2">lí</span><span data-s="li3">lǐ</span><span data-s="li4">lì</span></td>
+<td class="cell"><span data-s="lia1">liā</span><span data-s="lia2">liá</span><span data-s="lia3">liǎ</span><span data-s="lia4">lià</span></td>
+<td class="cell"><span data-s="liao1">liāo</span><span data-s="liao2">liáo</span><span data-s="liao3">liǎo</span><span data-s="liao4">liào</span></td>
+<td class="cell"><span data-s="lie1">liē</span><span data-s="lie2">lié</span><span data-s="lie3">liě</span><span data-s="lie4">liè</span></td>
+<td class="cell"><span data-s="liou1"> </span></td>
+<td class="cell"><span data-s="lian1">liān</span><span data-s="lian2">lián</span><span data-s="lian3">liǎn</span><span data-s="lian4">liàn</span></td>
+<td class="cell"><span data-s="liang1">liāng</span><span data-s="liang2">liáng</span><span data-s="liang3">liǎng</span><span data-s="liang4">liàng</span></td>
+<td class="cell"><span data-s="lin1">līn</span><span data-s="lin2">lín</span><span data-s="lin3">lǐn</span><span data-s="lin4">lìn</span></td>
+<td class="cell"><span data-s="ling1">līng</span><span data-s="ling2">líng</span><span data-s="ling3">lǐng</span><span data-s="ling4">lìng</span></td>
+<td class="cell"><span data-s="liong1">liōng</span><span data-s="liong2">lióng</span><span data-s="liong3">liǒng</span><span data-s="liong4">liòng</span></td>
+<td class="cell"><span data-s="lu1">lū</span><span data-s="lu2">lú</span><span data-s="lu3">lǔ</span><span data-s="lu4">lù</span></td>
+<td class="cell"><span data-s="lua1"> </span></td>
+<td class="cell"><span data-s="luo1">luō</span><span data-s="luo2">luó</span><span data-s="luo3">luǒ</span><span data-s="luo4">luò</span></td>
+<td class="cell"><span data-s="lui1">luī</span><span data-s="lui2">luí</span><span data-s="lui3">luǐ</span><span data-s="lui4">luì</span></td>
+<td class="cell"><span data-s="luai1">luāi</span><span data-s="luai2">luái</span><span data-s="luai3">luǎi</span><span data-s="luai4">luài</span></td>
+<td class="cell"><span data-s="luan1">luān</span><span data-s="luan2">luán</span><span data-s="luan3">luǎn</span><span data-s="luan4">luàn</span></td>
+<td class="cell"><span data-s="lun1">lūn</span><span data-s="lun2">lún</span><span data-s="lun3">lǔn</span><span data-s="lun4">lùn</span></td>
+<td class="cell"><span data-s="luang1">luāng</span><span data-s="luang2">luáng</span><span data-s="luang3">luǎng</span><span data-s="luang4">luàng</span></td>
+<td class="cell"><span data-s="lueng1"> </span></td>
+<td class="cell"><span data-s="lü1">lǖ</span><span data-s="lü2">lǘ</span><span data-s="lü3">lǚ</span><span data-s="lü4">lǜ</span></td>
+<td class="cell"><span data-s="lüe1">lǖe</span><span data-s="lüe2">lǘe</span><span data-s="lüe3">lǚe</span><span data-s="lüe4">lǜe</span></td>
+<td class="cell"><span data-s="lüan1">lǖan</span><span data-s="lüan2">lǘan</span><span data-s="lüan3">lǚan</span><span data-s="lüan4">lǜan</span></td>
+<td class="cell"><span data-s="lün1">lǖn</span><span data-s="lün2">lǘn</span><span data-s="lün3">lǚn</span><span data-s="lün4">lǜn</span></td>
+<tr>
+<th>g</th>
+<td class="cell"><span data-s="ga1">gā</span><span data-s="ga2">gá</span><span data-s="ga3">gǎ</span><span data-s="ga4">gà</span></td>
+<td class="cell"><span data-s="gai1">gāi</span><span data-s="gai2">gái</span><span data-s="gai3">gǎi</span><span data-s="gai4">gài</span></td>
+<td class="cell"><span data-s="gao1">gāo</span><span data-s="gao2">gáo</span><span data-s="gao3">gǎo</span><span data-s="gao4">gào</span></td>
+<td class="cell"><span data-s="gan1">gān</span><span data-s="gan2">gán</span><span data-s="gan3">gǎn</span><span data-s="gan4">gàn</span></td>
+<td class="cell"><span data-s="gang1">gāng</span><span data-s="gang2">gáng</span><span data-s="gang3">gǎng</span><span data-s="gang4">gàng</span></td>
+<td class="cell"><span data-s="go1"> </span></td>
+<td class="cell"><span data-s="gong1">gōng</span><span data-s="gong2">góng</span><span data-s="gong3">gǒng</span><span data-s="gong4">gòng</span></td>
+<td class="cell"><span data-s="gou1">gōu</span><span data-s="gou2">góu</span><span data-s="gou3">gǒu</span><span data-s="gou4">gòu</span></td>
+<td class="cell"><span data-s="ge1">gē</span><span data-s="ge2">gé</span><span data-s="ge3">gě</span><span data-s="ge4">gè</span></td>
+<td class="cell"><span data-s="gei1">gěi</span></td>
+<td class="cell"><span data-s="gen1">gēn</span><span data-s="gen2">gén</span><span data-s="gen3">gěn</span><span data-s="gen4">gèn</span></td>
+<td class="cell"><span data-s="geng1">gēng</span><span data-s="geng2">géng</span><span data-s="geng3">gěng</span><span data-s="geng4">gèng</span></td>
+<td class="cell"><span data-s="ger1"> </span></td>
+<td class="cell"><span data-s="gi1"> </span></td>
+<td class="cell"><span data-s="gia1"> </span></td>
+<td class="cell"><span data-s="giao1"> </span></td>
+<td class="cell"><span data-s="gie1"> </span></td>
+<td class="cell"><span data-s="giou1"> </span></td>
+<td class="cell"><span data-s="gian1"> </span></td>
+<td class="cell"><span data-s="giang1"> </span></td>
+<td class="cell"><span data-s="gin1"> </span></td>
+<td class="cell"><span data-s="ging1"> </span></td>
+<td class="cell"><span data-s="giong1"> </span></td>
+<td class="cell"><span data-s="gu1">gū</span><span data-s="gu2">gú</span><span data-s="gu3">gǔ</span><span data-s="gu4">gù</span></td>
+<td class="cell"><span data-s="gua1">guā</span><span data-s="gua2">guá</span><span data-s="gua3">guǎ</span><span data-s="gua4">guà</span></td>
+<td class="cell"><span data-s="guo1">guō</span><span data-s="guo2">guó</span><span data-s="guo3">guǒ</span><span data-s="guo4">guò</span></td>
+<td class="cell"><span data-s="gui1">guī</span><span data-s="gui2">guí</span><span data-s="gui3">guǐ</span><span data-s="gui4">guì</span></td>
+<td class="cell"><span data-s="guai1">guāi</span><span data-s="guai2">guái</span><span data-s="guai3">guǎi</span><span data-s="guai4">guài</span></td>
+<td class="cell"><span data-s="guan1">guān</span><span data-s="guan2">guán</span><span data-s="guan3">guǎn</span><span data-s="guan4">guàn</span></td>
+<td class="cell"><span data-s="gun1">gūn</span><span data-s="gun2">gún</span><span data-s="gun3">gǔn</span><span data-s="gun4">gùn</span></td>
+<td class="cell"><span data-s="guang1">guāng</span><span data-s="guang2">guáng</span><span data-s="guang3">guǎng</span><span data-s="guang4">guàng</span></td>
+<td class="cell"><span data-s="gueng1"> </span></td>
+<td class="cell"><span data-s="gü1"> </span></td>
+<td class="cell"><span data-s="güe1"> </span></td>
+<td class="cell"><span data-s="güan1"> </span></td>
+<td class="cell"><span data-s="gün1"> </span></td>
+<tr>
+<th>k</th>
+<td class="cell"><span data-s="ka1">kā</span><span data-s="ka2">ká</span><span data-s="ka3">kǎ</span><span data-s="ka4">kà</span></td>
+<td class="cell"><span data-s="kai1">kāi</span><span data-s="kai2">kái</span><span data-s="kai3">kǎi</span><span data-s="kai4">kài</span></td>
+<td class="cell"><span data-s="kao1">kāo</span><span data-s="kao2">káo</span><span data-s="kao3">kǎo</span><span data-s="kao4">kào</span></td>
+<td class="cell"><span data-s="kan1">kān</span><span data-s="kan2">kán</span><span data-s="kan3">kǎn</span><span data-s="kan4">kàn</span></td>
+<td class="cell"><span data-s="kang1">kāng</span><span data-s="kang2">káng</span><span data-s="kang3">kǎng</span><span data-s="kang4">kàng</span></td>
+<td class="cell"><span data-s="ko1"> </span></td>
+<td class="cell"><span data-s="kong1">kōng</span><span data-s="kong2">kóng</span><span data-s="kong3">kǒng</span><span data-s="kong4">kòng</span></td>
+<td class="cell"><span data-s="kou1">kōu</span><span data-s="kou2">kóu</span><span data-s="kou3">kǒu</span><span data-s="kou4">kòu</span></td>
+<td class="cell"><span data-s="ke1">kē</span><span data-s="ke2">ké</span><span data-s="ke3">kě</span><span data-s="ke4">kè</span></td>
+<td class="cell"><span data-s="kei1">kěi</span></td>
+<td class="cell"><span data-s="ken1">kēn</span><span data-s="ken2">kén</span><span data-s="ken3">kěn</span><span data-s="ken4">kèn</span></td>
+<td class="cell"><span data-s="keng1">kēng</span><span data-s="keng2">kéng</span><span data-s="keng3">kěng</span><span data-s="keng4">kèng</span></td>
+<td class="cell"><span data-s="ker1"> </span></td>
+<td class="cell"><span data-s="ki1"> </span></td>
+<td class="cell"><span data-s="kia1"> </span></td>
+<td class="cell"><span data-s="kiao1"> </span></td>
+<td class="cell"><span data-s="kie1"> </span></td>
+<td class="cell"><span data-s="kiou1"> </span></td>
+<td class="cell"><span data-s="kian1"> </span></td>
+<td class="cell"><span data-s="kiang1"> </span></td>
+<td class="cell"><span data-s="kin1"> </span></td>
+<td class="cell"><span data-s="king1"> </span></td>
+<td class="cell"><span data-s="kiong1"> </span></td>
+<td class="cell"><span data-s="ku1">kū</span><span data-s="ku2">kú</span><span data-s="ku3">kǔ</span><span data-s="ku4">kù</span></td>
+<td class="cell"><span data-s="kua1">kuā</span><span data-s="kua2">kuá</span><span data-s="kua3">kuǎ</span><span data-s="kua4">kuà</span></td>
+<td class="cell"><span data-s="kuo1">kuō</span><span data-s="kuo2">kuó</span><span data-s="kuo3">kuǒ</span><span data-s="kuo4">kuò</span></td>
+<td class="cell"><span data-s="kui1">kuī</span><span data-s="kui2">kuí</span><span data-s="kui3">kuǐ</span><span data-s="kui4">kuì</span></td>
+<td class="cell"><span data-s="kuai1">kuāi</span><span data-s="kuai2">kuái</span><span data-s="kuai3">kuǎi</span><span data-s="kuai4">kuài</span></td>
+<td class="cell"><span data-s="kuan1">kuān</span><span data-s="kuan2">kuán</span><span data-s="kuan3">kuǎn</span><span data-s="kuan4">kuàn</span></td>
+<td class="cell"><span data-s="kun1">kūn</span><span data-s="kun2">kún</span><span data-s="kun3">kǔn</span><span data-s="kun4">kùn</span></td>
+<td class="cell"><span data-s="kuang1">kuāng</span><span data-s="kuang2">kuáng</span><span data-s="kuang3">kuǎng</span><span data-s="kuang4">kuàng</span></td>
+<td class="cell"><span data-s="kueng1"> </span></td>
+<td class="cell"><span data-s="kü1"> </span></td>
+<td class="cell"><span data-s="küe1"> </span></td>
+<td class="cell"><span data-s="küan1"> </span></td>
+<td class="cell"><span data-s="kün1"> </span></td>
+<tr>
+<th>h</th>
+<td class="cell"><span data-s="ha1">hā</span><span data-s="ha2">há</span><span data-s="ha3">hǎ</span><span data-s="ha4">hà</span></td>
+<td class="cell"><span data-s="hai1">hāi</span><span data-s="hai2">hái</span><span data-s="hai3">hǎi</span><span data-s="hai4">hài</span></td>
+<td class="cell"><span data-s="hao1">hāo</span><span data-s="hao2">háo</span><span data-s="hao3">hǎo</span><span data-s="hao4">hào</span></td>
+<td class="cell"><span data-s="han1">hān</span><span data-s="han2">hán</span><span data-s="han3">hǎn</span><span data-s="han4">hàn</span></td>
+<td class="cell"><span data-s="hang1">hāng</span><span data-s="hang2">háng</span><span data-s="hang3">hǎng</span><span data-s="hang4">hàng</span></td>
+<td class="cell"><span data-s="ho1"> </span></td>
+<td class="cell"><span data-s="hong1">hōng</span><span data-s="hong2">hóng</span><span data-s="hong3">hǒng</span><span data-s="hong4">hòng</span></td>
+<td class="cell"><span data-s="hou1">hōu</span><span data-s="hou2">hóu</span><span data-s="hou3">hǒu</span><span data-s="hou4">hòu</span></td>
+<td class="cell"><span data-s="he1">hē</span><span data-s="he2">hé</span><span data-s="he3">hě</span><span data-s="he4">hè</span></td>
+<td class="cell"><span data-s="hei1">hēi</span><span data-s="hei2">héi</span><span data-s="hei3">hěi</span><span data-s="hei4">hèi</span></td>
+<td class="cell"><span data-s="hen1">hēn</span><span data-s="hen2">hén</span><span data-s="hen3">hěn</span><span data-s="hen4">hèn</span></td>
+<td class="cell"><span data-s="heng1">hēng</span><span data-s="heng2">héng</span><span data-s="heng3">hěng</span><span data-s="heng4">hèng</span></td>
+<td class="cell"><span data-s="her1"> </span></td>
+<td class="cell"><span data-s="hi1"> </span></td>
+<td class="cell"><span data-s="hia1"> </span></td>
+<td class="cell"><span data-s="hiao1"> </span></td>
+<td class="cell"><span data-s="hie1"> </span></td>
+<td class="cell"><span data-s="hiou1"> </span></td>
+<td class="cell"><span data-s="hian1"> </span></td>
+<td class="cell"><span data-s="hiang1"> </span></td>
+<td class="cell"><span data-s="hin1"> </span></td>
+<td class="cell"><span data-s="hing1"> </span></td>
+<td class="cell"><span data-s="hiong1"> </span></td>
+<td class="cell"><span data-s="hu1">hū</span><span data-s="hu2">hú</span><span data-s="hu3">hǔ</span><span data-s="hu4">hù</span></td>
+<td class="cell"><span data-s="hua1">huā</span><span data-s="hua2">huá</span><span data-s="hua3">huǎ</span><span data-s="hua4">huà</span></td>
+<td class="cell"><span data-s="huo1">huō</span><span data-s="huo2">huó</span><span data-s="huo3">huǒ</span><span data-s="huo4">huò</span></td>
+<td class="cell"><span data-s="hui1">huī</span><span data-s="hui2">huí</span><span data-s="hui3">huǐ</span><span data-s="hui4">huì</span></td>
+<td class="cell"><span data-s="huai1">huāi</span><span data-s="huai2">huái</span><span data-s="huai3">huǎi</span><span data-s="huai4">huài</span></td>
+<td class="cell"><span data-s="huan1">huān</span><span data-s="huan2">huán</span><span data-s="huan3">huǎn</span><span data-s="huan4">huàn</span></td>
+<td class="cell"><span data-s="hun1">hūn</span><span data-s="hun2">hún</span><span data-s="hun3">hǔn</span><span data-s="hun4">hùn</span></td>
+<td class="cell"><span data-s="huang1">huāng</span><span data-s="huang2">huáng</span><span data-s="huang3">huǎng</span><span data-s="huang4">huàng</span></td>
+<td class="cell"><span data-s="hueng1"> </span></td>
+<td class="cell"><span data-s="hü1"> </span></td>
+<td class="cell"><span data-s="hüe1"> </span></td>
+<td class="cell"><span data-s="hüan1"> </span></td>
+<td class="cell"><span data-s="hün1"> </span></td>
+<tr>
+<th>j</th>
+<td class="cell"><span data-s="ja1"> </span></td>
+<td class="cell"><span data-s="jai1"> </span></td>
+<td class="cell"><span data-s="jao1"> </span></td>
+<td class="cell"><span data-s="jan1"> </span></td>
+<td class="cell"><span data-s="jang1"> </span></td>
+<td class="cell"><span data-s="jo1"> </span></td>
+<td class="cell"><span data-s="jong1"> </span></td>
+<td class="cell"><span data-s="jou1"> </span></td>
+<td class="cell"><span data-s="je1"> </span></td>
+<td class="cell"><span data-s="jei1"> </span></td>
+<td class="cell"><span data-s="jen1"> </span></td>
+<td class="cell"><span data-s="jeng1"> </span></td>
+<td class="cell"><span data-s="jer1"> </span></td>
+<td class="cell"><span data-s="ji1">jī</span><span data-s="ji2">jí</span><span data-s="ji3">jǐ</span><span data-s="ji4">jì</span></td>
+<td class="cell"><span data-s="jia1">jiā</span><span data-s="jia2">jiá</span><span data-s="jia3">jiǎ</span><span data-s="jia4">jià</span></td>
+<td class="cell"><span data-s="jiao1">jiāo</span><span data-s="jiao2">jiáo</span><span data-s="jiao3">jiǎo</span><span data-s="jiao4">jiào</span></td>
+<td class="cell"><span data-s="jie1">jiē</span><span data-s="jie2">jié</span><span data-s="jie3">jiě</span><span data-s="jie4">jiè</span></td>
+<td class="cell"><span data-s="jiou1"> </span></td>
+<td class="cell"><span data-s="jian1">jiān</span><span data-s="jian2">jián</span><span data-s="jian3">jiǎn</span><span data-s="jian4">jiàn</span></td>
+<td class="cell"><span data-s="jiang1">jiāng</span><span data-s="jiang2">jiáng</span><span data-s="jiang3">jiǎng</span><span data-s="jiang4">jiàng</span></td>
+<td class="cell"><span data-s="jin1">jīn</span><span data-s="jin2">jín</span><span data-s="jin3">jǐn</span><span data-s="jin4">jìn</span></td>
+<td class="cell"><span data-s="jing1">jīng</span><span data-s="jing2">jíng</span><span data-s="jing3">jǐng</span><span data-s="jing4">jìng</span></td>
+<td class="cell"><span data-s="jiong1">jiōng</span><span data-s="jiong2">jióng</span><span data-s="jiong3">jiǒng</span><span data-s="jiong4">jiòng</span></td>
+<td class="cell"><span data-s="ju1">jū</span><span data-s="ju2">jú</span><span data-s="ju3">jǔ</span><span data-s="ju4">jù</span></td>
+<td class="cell"><span data-s="jua1"> </span></td>
+<td class="cell"><span data-s="juo1"> </span></td>
+<td class="cell"><span data-s="jui1">juī</span><span data-s="jui2">juí</span><span data-s="jui3">juǐ</span><span data-s="jui4">juì</span></td>
+<td class="cell"><span data-s="juai1"> </span></td>
+<td class="cell"><span data-s="juan1">juān</span><span data-s="juan2">juán</span><span data-s="juan3">juǎn</span><span data-s="juan4">juàn</span></td>
+<td class="cell"><span data-s="jun1">jūn</span><span data-s="jun2">jún</span><span data-s="jun3">jǔn</span><span data-s="jun4">jùn</span></td>
+<td class="cell"><span data-s="juang1"> </span></td>
+<td class="cell"><span data-s="jueng1"> </span></td>
+<td class="cell"><span data-s="jü1"> </span></td>
+<td class="cell"><span data-s="jüe1">juē</span><span data-s="jüe2">jué</span><span data-s="jüe3">juě</span><span data-s="jüe4">juè</span></td>
+<td class="cell"><span data-s="jüan1">juān</span><span data-s="jüan2">juán</span><span data-s="jüan3">juǎn</span><span data-s="jüan4">juàn</span></td>
+<td class="cell"><span data-s="jün1">jūn</span><span data-s="jün2">jún</span><span data-s="jün3">jǔn</span><span data-s="jün4">jùn</span></td>
+<tr>
+<th>q</th>
+<td class="cell"><span data-s="qa1"> </span></td>
+<td class="cell"><span data-s="qai1"> </span></td>
+<td class="cell"><span data-s="qao1"> </span></td>
+<td class="cell"><span data-s="qan1"> </span></td>
+<td class="cell"><span data-s="qang1"> </span></td>
+<td class="cell"><span data-s="qo1"> </span></td>
+<td class="cell"><span data-s="qong1"> </span></td>
+<td class="cell"><span data-s="qou1"> </span></td>
+<td class="cell"><span data-s="qe1"> </span></td>
+<td class="cell"><span data-s="qei1"> </span></td>
+<td class="cell"><span data-s="qen1"> </span></td>
+<td class="cell"><span data-s="qeng1"> </span></td>
+<td class="cell"><span data-s="qer1"> </span></td>
+<td class="cell"><span data-s="qi1">qī</span><span data-s="qi2">qí</span><span data-s="qi3">qǐ</span><span data-s="qi4">qì</span></td>
+<td class="cell"><span data-s="qia1">qiā</span><span data-s="qia2">qiá</span><span data-s="qia3">qiǎ</span><span data-s="qia4">qià</span></td>
+<td class="cell"><span data-s="qiao1">qiāo</span><span data-s="qiao2">qiáo</span><span data-s="qiao3">qiǎo</span><span data-s="qiao4">qiào</span></td>
+<td class="cell"><span data-s="qie1">qiē</span><span data-s="qie2">qié</span><span data-s="qie3">qiě</span><span data-s="qie4">qiè</span></td>
+<td class="cell"><span data-s="qiou1"> </span></td>
+<td class="cell"><span data-s="qian1">qiān</span><span data-s="qian2">qián</span><span data-s="qian3">qiǎn</span><span data-s="qian4">qiàn</span></td>
+<td class="cell"><span data-s="qiang1">qiāng</span><span data-s="qiang2">qiáng</span><span data-s="qiang3">qiǎng</span><span data-s="qiang4">qiàng</span></td>
+<td class="cell"><span data-s="qin1">qīn</span><span data-s="qin2">qín</span><span data-s="qin3">qǐn</span><span data-s="qin4">qìn</span></td>
+<td class="cell"><span data-s="qing1">qīng</span><span data-s="qing2">qíng</span><span data-s="qing3">qǐng</span><span data-s="qing4">qìng</span></td>
+<td class="cell"><span data-s="qiong1">qiōng</span><span data-s="qiong2">qióng</span><span data-s="qiong3">qiǒng</span><span data-s="qiong4">qiòng</span></td>
+<td class="cell"><span data-s="qu1">qū</span><span data-s="qu2">qú</span><span data-s="qu3">qǔ</span><span data-s="qu4">qù</span></td>
+<td class="cell"><span data-s="qua1"> </span></td>
+<td class="cell"><span data-s="quo1"> </span></td>
+<td class="cell"><span data-s="qui1">quī</span><span data-s="qui2">quí</span><span data-s="qui3">quǐ</span><span data-s="qui4">quì</span></td>
+<td class="cell"><span data-s="quai1"> </span></td>
+<td class="cell"><span data-s="quan1">quān</span><span data-s="quan2">quán</span><span data-s="quan3">quǎn</span><span data-s="quan4">quàn</span></td>
+<td class="cell"><span data-s="qun1">qūn</span><span data-s="qun2">qún</span><span data-s="qun3">qǔn</span><span data-s="qun4">qùn</span></td>
+<td class="cell"><span data-s="quang1"> </span></td>
+<td class="cell"><span data-s="queng1"> </span></td>
+<td class="cell"><span data-s="qü1"> </span></td>
+<td class="cell"><span data-s="qüe1">quē</span><span data-s="qüe2">qué</span><span data-s="qüe3">quě</span><span data-s="qüe4">què</span></td>
+<td class="cell"><span data-s="qüan1">quān</span><span data-s="qüan2">quán</span><span data-s="qüan3">quǎn</span><span data-s="qüan4">quàn</span></td>
+<td class="cell"><span data-s="qün1">qūn</span><span data-s="qün2">qún</span><span data-s="qün3">qǔn</span><span data-s="qün4">qùn</span></td>
+<tr>
+<th>x</th>
+<td class="cell"><span data-s="xa1"> </span></td>
+<td class="cell"><span data-s="xai1"> </span></td>
+<td class="cell"><span data-s="xao1"> </span></td>
+<td class="cell"><span data-s="xan1"> </span></td>
+<td class="cell"><span data-s="xiang1">xiāng</span><span data-s="xiang2">xiáng</span><span data-s="xiang3">xiǎng</span><span data-s="xiang4">xiàng</span></td>
+<td class="cell"><span data-s="xo1"> </span></td>
+<td class="cell"><span data-s="xong1">xiōng</span><span data-s="xong2">xióng</span><span data-s="xong3">xiǒng</span><span data-s="xong4">xiòng</span></td>
+<td class="cell"><span data-s="xou1"> </span></td>
+<td class="cell"><span data-s="xe1"> </span></td>
+<td class="cell"><span data-s="xei1"> </span></td>
+<td class="cell"><span data-s="xen1"> </span></td>
+<td class="cell"><span data-s="xeng1"> </span></td>
+<td class="cell"><span data-s="xer1"> </span></td>
+<td class="cell"><span data-s="xi1">xī</span><span data-s="xi2">xí</span><span data-s="xi3">xǐ</span><span data-s="xi4">xì</span></td>
+<td class="cell"><span data-s="xia1">xiā</span><span data-s="xia2">xiá</span><span data-s="xia3">xiǎ</span><span data-s="xia4">xià</span></td>
+<td class="cell"><span data-s="xiao1">xiāo</span><span data-s="xiao2">xiáo</span><span data-s="xiao3">xiǎo</span><span data-s="xiao4">xiào</span></td>
+<td class="cell"><span data-s="xie1">xiē</span><span data-s="xie2">xié</span><span data-s="xie3">xiě</span><span data-s="xie4">xiè</span></td>
+<td class="cell"><span data-s="xiou1"> </span></td>
+<td class="cell"><span data-s="xian1">xiān</span><span data-s="xian2">xián</span><span data-s="xian3">xiǎn</span><span data-s="xian4">xiàn</span></td>
+<td class="cell"><span data-s="xiang1">xiāng</span><span data-s="xiang2">xiáng</span><span data-s="xiang3">xiǎng</span><span data-s="xiang4">xiàng</span></td>
+<td class="cell"><span data-s="xin1">xīn</span><span data-s="xin2">xín</span><span data-s="xin3">xǐn</span><span data-s="xin4">xìn</span></td>
+<td class="cell"><span data-s="xing1">xīng</span><span data-s="xing2">xíng</span><span data-s="xing3">xǐng</span><span data-s="xing4">xìng</span></td>
+<td class="cell"><span data-s="xiong1">xiōng</span><span data-s="xiong2">xióng</span><span data-s="xiong3">xiǒng</span><span data-s="xiong4">xiòng</span></td>
+<td class="cell"><span data-s="xu1">xū</span><span data-s="xu2">xú</span><span data-s="xu3">xǔ</span><span data-s="xu4">xù</span></td>
+<td class="cell"><span data-s="xua1"> </span></td>
+<td class="cell"><span data-s="xuo1"> </span></td>
+<td class="cell"><span data-s="xui1">xuī</span><span data-s="xui2">xuí</span><span data-s="xui3">xuǐ</span><span data-s="xui4">xuì</span></td>
+<td class="cell"><span data-s="xuai1"> </span></td>
+<td class="cell"><span data-s="xuan1">xuān</span><span data-s="xuan2">xuán</span><span data-s="xuan3">xuǎn</span><span data-s="xuan4">xuàn</span></td>
+<td class="cell"><span data-s="xun1">xūn</span><span data-s="xun2">xún</span><span data-s="xun3">xǔn</span><span data-s="xun4">xùn</span></td>
+<td class="cell"><span data-s="xuang1"> </span></td>
+<td class="cell"><span data-s="xueng1"> </span></td>
+<td class="cell"><span data-s="xü1"> </span></td>
+<td class="cell"><span data-s="xüe1">xuē</span><span data-s="xüe2">xué</span><span data-s="xüe3">xuě</span><span data-s="xüe4">xuè</span></td>
+<td class="cell"><span data-s="xüan1">xuān</span><span data-s="xüan2">xuán</span><span data-s="xüan3">xuǎn</span><span data-s="xüan4">xuàn</span></td>
+<td class="cell"><span data-s="xün1">xūn</span><span data-s="xün2">xún</span><span data-s="xün3">xǔn</span><span data-s="xün4">xùn</span></td>
+<tr>
+<th>zh</th>
+<td class="cell"><span data-s="zha1">zhā</span><span data-s="zha2">zhá</span><span data-s="zha3">zhǎ</span><span data-s="zha4">zhà</span></td>
+<td class="cell"><span data-s="zhai1">zhāi</span><span data-s="zhai2">zhái</span><span data-s="zhai3">zhǎi</span><span data-s="zhai4">zhài</span></td>
+<td class="cell"><span data-s="zhao1">zhāo</span><span data-s="zhao2">zháo</span><span data-s="zhao3">zhǎo</span><span data-s="zhao4">zhào</span></td>
+<td class="cell"><span data-s="zhan1">zhān</span><span data-s="zhan2">zhán</span><span data-s="zhan3">zhǎn</span><span data-s="zhan4">zhàn</span></td>
+<td class="cell"><span data-s="zhang1">zhāng</span><span data-s="zhang2">zháng</span><span data-s="zhang3">zhǎng</span><span data-s="zhang4">zhàng</span></td>
+<td class="cell"><span data-s="zho1"> </span></td>
+<td class="cell"><span data-s="zhong1">zhōng</span><span data-s="zhong2">zhóng</span><span data-s="zhong3">zhǒng</span><span data-s="zhong4">zhòng</span></td>
+<td class="cell"><span data-s="zhou1">zhōu</span><span data-s="zhou2">zhóu</span><span data-s="zhou3">zhǒu</span><span data-s="zhou4">zhòu</span></td>
+<td class="cell"><span data-s="zhe1">zhē</span><span data-s="zhe2">zhé</span><span data-s="zhe3">zhě</span><span data-s="zhe4">zhè</span></td>
+<td class="cell"><span data-s="zhei1"> </span></td>
+<td class="cell"><span data-s="zhen1">zhēn</span><span data-s="zhen2">zhén</span><span data-s="zhen3">zhěn</span><span data-s="zhen4">zhèn</span></td>
+<td class="cell"><span data-s="zheng1">zhēng</span><span data-s="zheng2">zhéng</span><span data-s="zheng3">zhěng</span><span data-s="zheng4">zhèng</span></td>
+<td class="cell"><span data-s="zher1"> </span></td>
+<td class="cell"><span data-s="zhi1">zhī</span><span data-s="zhi2">zhí</span><span data-s="zhi3">zhǐ</span><span data-s="zhi4">zhì</span></td>
+<td class="cell"><span data-s="zhia1"> </span></td>
+<td class="cell"><span data-s="zhiao1"> </span></td>
+<td class="cell"><span data-s="zhie1"> </span></td>
+<td class="cell"><span data-s="zhiou1"> </span></td>
+<td class="cell"><span data-s="zhian1"> </span></td>
+<td class="cell"><span data-s="zhiang1"> </span></td>
+<td class="cell"><span data-s="zhin1"> </span></td>
+<td class="cell"><span data-s="zhing1"> </span></td>
+<td class="cell"><span data-s="zhiong1"> </span></td>
+<td class="cell"><span data-s="zhu1">zhū</span><span data-s="zhu2">zhú</span><span data-s="zhu3">zhǔ</span><span data-s="zhu4">zhù</span></td>
+<td class="cell"><span data-s="zhua1">zhuā</span><span data-s="zhua2">zhuá</span><span data-s="zhua3">zhuǎ</span><span data-s="zhua4">zhuà</span></td>
+<td class="cell"><span data-s="zhuo1">zhuō</span><span data-s="zhuo2">zhuó</span><span data-s="zhuo3">zhuǒ</span><span data-s="zhuo4">zhuò</span></td>
+<td class="cell"><span data-s="zhui1">zhuī</span><span data-s="zhui2">zhuí</span><span data-s="zhui3">zhuǐ</span><span data-s="zhui4">zhuì</span></td>
+<td class="cell"><span data-s="zhuai1">zhuāi</span><span data-s="zhuai2">zhuái</span><span data-s="zhuai3">zhuǎi</span><span data-s="zhuai4">zhuài</span></td>
+<td class="cell"><span data-s="zhuan1">zhuān</span><span data-s="zhuan2">zhuán</span><span data-s="zhuan3">zhuǎn</span><span data-s="zhuan4">zhuàn</span></td>
+<td class="cell"><span data-s="zhun1">zhūn</span><span data-s="zhun2">zhún</span><span data-s="zhun3">zhǔn</span><span data-s="zhun4">zhùn</span></td>
+<td class="cell"><span data-s="zhuang1">zhuāng</span><span data-s="zhuang2">zhuáng</span><span data-s="zhuang3">zhuǎng</span><span data-s="zhuang4">zhuàng</span></td>
+<td class="cell"><span data-s="zhueng1"> </span></td>
+<td class="cell"><span data-s="zhü1"> </span></td>
+<td class="cell"><span data-s="zhüe1"> </span></td>
+<td class="cell"><span data-s="zhüan1"> </span></td>
+<td class="cell"><span data-s="zhün1"> </span></td>
+<tr>
+<th>ch</th>
+<td class="cell"><span data-s="cha1">chā</span><span data-s="cha2">chá</span><span data-s="cha3">chǎ</span><span data-s="cha4">chà</span></td>
+<td class="cell"><span data-s="chai1">chāi</span><span data-s="chai2">chái</span><span data-s="chai3">chǎi</span><span data-s="chai4">chài</span></td>
+<td class="cell"><span data-s="chao1">chāo</span><span data-s="chao2">cháo</span><span data-s="chao3">chǎo</span><span data-s="chao4">chào</span></td>
+<td class="cell"><span data-s="chan1">chān</span><span data-s="chan2">chán</span><span data-s="chan3">chǎn</span><span data-s="chan4">chàn</span></td>
+<td class="cell"><span data-s="chang1">chāng</span><span data-s="chang2">cháng</span><span data-s="chang3">chǎng</span><span data-s="chang4">chàng</span></td>
+<td class="cell"><span data-s="cho1"> </span></td>
+<td class="cell"><span data-s="chong1">chōng</span><span data-s="chong2">chóng</span><span data-s="chong3">chǒng</span><span data-s="chong4">chòng</span></td>
+<td class="cell"><span data-s="chou1">chōu</span><span data-s="chou2">chóu</span><span data-s="chou3">chǒu</span><span data-s="chou4">chòu</span></td>
+<td class="cell"><span data-s="che1">chē</span><span data-s="che2">ché</span><span data-s="che3">chě</span><span data-s="che4">chè</span></td>
+<td class="cell"><span data-s="chei1"> </span></td>
+<td class="cell"><span data-s="chen1">chēn</span><span data-s="chen2">chén</span><span data-s="chen3">chěn</span><span data-s="chen4">chèn</span></td>
+<td class="cell"><span data-s="cheng1">chēng</span><span data-s="cheng2">chéng</span><span data-s="cheng3">chěng</span><span data-s="cheng4">chèng</span></td>
+<td class="cell"><span data-s="cher1"> </span></td>
+<td class="cell"><span data-s="chi1">chī</span><span data-s="chi2">chí</span><span data-s="chi3">chǐ</span><span data-s="chi4">chì</span></td>
+<td class="cell"><span data-s="chia1"> </span></td>
+<td class="cell"><span data-s="chiao1">chīao</span><span data-s="chiao2">chíao</span><span data-s="chiao3">chǐao</span><span data-s="chiao4">chìao</span></td>
+<td class="cell"><span data-s="chie1"> </span></td>
+<td class="cell"><span data-s="chiou1"> </span></td>
+<td class="cell"><span data-s="chian1"> </span></td>
+<td class="cell"><span data-s="chiang1"> </span></td>
+<td class="cell"><span data-s="chin1"> </span></td>
+<td class="cell"><span data-s="ching1"> </span></td>
+<td class="cell"><span data-s="chiong1"> </span></td>
+<td class="cell"><span data-s="chu1">chū</span><span data-s="chu2">chú</span><span data-s="chu3">chǔ</span><span data-s="chu4">chù</span></td>
+<td class="cell"><span data-s="chua1">chuā</span><span data-s="chua2">chuá</span><span data-s="chua3">chuǎ</span><span data-s="chua4">chuà</span></td>
+<td class="cell"><span data-s="chuo1">chuō</span><span data-s="chuo2">chuó</span><span data-s="chuo3">chuǒ</span><span data-s="chuo4">chuò</span></td>
+<td class="cell"><span data-s="chui1">chuī</span><span data-s="chui2">chuí</span><span data-s="chui3">chuǐ</span><span data-s="chui4">chuì</span></td>
+<td class="cell"><span data-s="chuai1">chuāi</span><span data-s="chuai2">chuái</span><span data-s="chuai3">chuǎi</span><span data-s="chuai4">chuài</span></td>
+<td class="cell"><span data-s="chuan1">chuān</span><span data-s="chuan2">chuán</span><span data-s="chuan3">chuǎn</span><span data-s="chuan4">chuàn</span></td>
+<td class="cell"><span data-s="chun1">chūn</span><span data-s="chun2">chún</span><span data-s="chun3">chǔn</span><span data-s="chun4">chùn</span></td>
+<td class="cell"><span data-s="chuang1">chuāng</span><span data-s="chuang2">chuáng</span><span data-s="chuang3">chuǎng</span><span data-s="chuang4">chuàng</span></td>
+<td class="cell"><span data-s="chueng1"> </span></td>
+<td class="cell"><span data-s="chü1"> </span></td>
+<td class="cell"><span data-s="chüe1"> </span></td>
+<td class="cell"><span data-s="chüan1"> </span></td>
+<td class="cell"><span data-s="chün1"> </span></td>
+<tr>
+<th>sh</th>
+<td class="cell"><span data-s="sha1">shā</span><span data-s="sha2">shá</span><span data-s="sha3">shǎ</span><span data-s="sha4">shà</span></td>
+<td class="cell"><span data-s="shai1">shāi</span><span data-s="shai2">shái</span><span data-s="shai3">shǎi</span><span data-s="shai4">shài</span></td>
+<td class="cell"><span data-s="shao1">shāo</span><span data-s="shao2">sháo</span><span data-s="shao3">shǎo</span><span data-s="shao4">shào</span></td>
+<td class="cell"><span data-s="shan1">shān</span><span data-s="shan2">shán</span><span data-s="shan3">shǎn</span><span data-s="shan4">shàn</span></td>
+<td class="cell"><span data-s="shang1">shāng</span><span data-s="shang2">sháng</span><span data-s="shang3">shǎng</span><span data-s="shang4">shàng</span></td>
+<td class="cell"><span data-s="sho1"> </span></td>
+<td class="cell"><span data-s="shong1">shōng</span><span data-s="shong2">shóng</span><span data-s="shong3">shǒng</span><span data-s="shong4">shòng</span></td>
+<td class="cell"><span data-s="shou1">shōu</span><span data-s="shou2">shóu</span><span data-s="shou3">shǒu</span><span data-s="shou4">shòu</span></td>
+<td class="cell"><span data-s="she1">shē</span><span data-s="she2">shé</span><span data-s="she3">shě</span><span data-s="she4">shè</span></td>
+<td class="cell"><span data-s="shei1"> </span></td>
+<td class="cell"><span data-s="shen1">shēn</span><span data-s="shen2">shén</span><span data-s="shen3">shěn</span><span data-s="shen4">shèn</span></td>
+<td class="cell"><span data-s="sheng1">shēng</span><span data-s="sheng2">shéng</span><span data-s="sheng3">shěng</span><span data-s="sheng4">shèng</span></td>
+<td class="cell"><span data-s="sher1"> </span></td>
+<td class="cell"><span data-s="shi1">shī</span><span data-s="shi2">shí</span><span data-s="shi3">shǐ</span><span data-s="shi4">shì</span></td>
+<td class="cell"><span data-s="shia1"> </span></td>
+<td class="cell"><span data-s="shiao1"> </span></td>
+<td class="cell"><span data-s="shie1"> </span></td>
+<td class="cell"><span data-s="shiou1"> </span></td>
+<td class="cell"><span data-s="shian1"> </span></td>
+<td class="cell"><span data-s="shiang1"> </span></td>
+<td class="cell"><span data-s="shin1"> </span></td>
+<td class="cell"><span data-s="shing1"> </span></td>
+<td class="cell"><span data-s="shiong1"> </span></td>
+<td class="cell"><span data-s="shu1">shū</span><span data-s="shu2">shú</span><span data-s="shu3">shǔ</span><span data-s="shu4">shù</span></td>
+<td class="cell"><span data-s="shua1">shuā</span><span data-s="shua2">shuá</span><span data-s="shua3">shuǎ</span><span data-s="shua4">shuà</span></td>
+<td class="cell"><span data-s="shuo1">shuō</span><span data-s="shuo2">shuó</span><span data-s="shuo3">shuǒ</span><span data-s="shuo4">shuò</span></td>
+<td class="cell"><span data-s="shui1">shuī</span><span data-s="shui2">shuí</span><span data-s="shui3">shuǐ</span><span data-s="shui4">shuì</span></td>
+<td class="cell"><span data-s="shuai1">shuāi</span><span data-s="shuai2">shuái</span><span data-s="shuai3">shuǎi</span><span data-s="shuai4">shuài</span></td>
+<td class="cell"><span data-s="shuan1">shuān</span><span data-s="shuan2">shuán</span><span data-s="shuan3">shuǎn</span><span data-s="shuan4">shuàn</span></td>
+<td class="cell"><span data-s="shun1">shūn</span><span data-s="shun2">shún</span><span data-s="shun3">shǔn</span><span data-s="shun4">shùn</span></td>
+<td class="cell"><span data-s="shuang1">shuāng</span><span data-s="shuang2">shuáng</span><span data-s="shuang3">shuǎng</span><span data-s="shuang4">shuàng</span></td>
+<td class="cell"><span data-s="shueng1"> </span></td>
+<td class="cell"><span data-s="shü1"> </span></td>
+<td class="cell"><span data-s="shüe1"> </span></td>
+<td class="cell"><span data-s="shüan1"> </span></td>
+<td class="cell"><span data-s="shün1"> </span></td>
+<tr>
+<th>r</th>
+<td class="cell"><span data-s="ra1"> </span></td>
+<td class="cell"><span data-s="rai1"> </span></td>
+<td class="cell"><span data-s="rao1">ráo</span><span data-s="rao2">rǎo</span><span data-s="rao3">rào</span></td>
+<td class="cell"><span data-s="ran1">rān</span><span data-s="ran2">rán</span><span data-s="ran3">rǎn</span><span data-s="ran4">ràn</span></td>
+<td class="cell"><span data-s="rang1">rāng</span><span data-s="rang2">ráng</span><span data-s="rang3">rǎng</span><span data-s="rang4">ràng</span></td>
+<td class="cell"><span data-s="ro1"> </span></td>
+<td class="cell"><span data-s="rong1">rōng</span><span data-s="rong2">róng</span><span data-s="rong3">rǒng</span><span data-s="rong4">ròng</span></td>
+<td class="cell"><span data-s="rou1">rōu</span><span data-s="rou2">róu</span><span data-s="rou3">rǒu</span><span data-s="rou4">ròu</span></td>
+<td class="cell"><span data-s="re1"> </span></td>
+<td class="cell"><span data-s="rei1"> </span></td>
+<td class="cell"><span data-s="ren1">rēn</span><span data-s="ren2">rén</span><span data-s="ren3">rěn</span><span data-s="ren4">rèn</span></td>
+<td class="cell"><span data-s="reng1">rēng</span><span data-s="reng2">réng</span><span data-s="reng3">rěng</span><span data-s="reng4">rèng</span></td>
+<td class="cell"><span data-s="rer1"> </span></td>
+<td class="cell"><span data-s="ri1">rī</span><span data-s="ri2">rí</span><span data-s="ri3">rǐ</span><span data-s="ri4">rì</span></td>
+<td class="cell"><span data-s="ria1"> </span></td>
+<td class="cell"><span data-s="riao1"> </span></td>
+<td class="cell"><span data-s="rie1"> </span></td>
+<td class="cell"><span data-s="riou1"> </span></td>
+<td class="cell"><span data-s="rian1"> </span></td>
+<td class="cell"><span data-s="riang1"> </span></td>
+<td class="cell"><span data-s="rin1"> </span></td>
+<td class="cell"><span data-s="ring1"> </span></td>
+<td class="cell"><span data-s="riong1"> </span></td>
+<td class="cell"><span data-s="ru1">rū</span><span data-s="ru2">rú</span><span data-s="ru3">rǔ</span><span data-s="ru4">rù</span></td>
+<td class="cell"><span data-s="rua1"> </span></td>
+<td class="cell"><span data-s="ruo1">ruō</span><span data-s="ruo2">ruó</span><span data-s="ruo3">ruǒ</span><span data-s="ruo4">ruò</span></td>
+<td class="cell"><span data-s="rui1">ruī</span><span data-s="rui2">ruí</span><span data-s="rui3">ruǐ</span><span data-s="rui4">ruì</span></td>
+<td class="cell"><span data-s="ruai1">ruāi</span><span data-s="ruai2">ruái</span><span data-s="ruai3">ruǎi</span><span data-s="ruai4">ruài</span></td>
+<td class="cell"><span data-s="ruan1">ruān</span><span data-s="ruan2">ruán</span><span data-s="ruan3">ruǎn</span><span data-s="ruan4">ruàn</span></td>
+<td class="cell"><span data-s="run1">rūn</span><span data-s="run2">rún</span><span data-s="run3">rǔn</span><span data-s="run4">rùn</span></td>
+<td class="cell"><span data-s="ruang1">ruāng</span><span data-s="ruang2">ruáng</span><span data-s="ruang3">ruǎng</span><span data-s="ruang4">ruàng</span></td>
+<td class="cell"><span data-s="rueng1"> </span></td>
+<td class="cell"><span data-s="rü1">rǖ</span><span data-s="rü2">rǘ</span><span data-s="rü3">rǚ</span><span data-s="rü4">rǜ</span></td>
+<td class="cell"><span data-s="rüe1">rǖe</span><span data-s="rüe2">rǘe</span><span data-s="rüe3">rǚe</span><span data-s="rüe4">rǜe</span></td>
+<td class="cell"><span data-s="rüan1">rǖan</span><span data-s="rüan2">rǘan</span><span data-s="rüan3">rǚan</span><span data-s="rüan4">rǜan</span></td>
+<td class="cell"><span data-s="rün1">rǖn</span><span data-s="rün2">rǘn</span><span data-s="rün3">rǚn</span><span data-s="rün4">rǜn</span></td>
+<tr>
+<th>z</th>
+<td class="cell"><span data-s="za1">zā</span><span data-s="za2">zá</span><span data-s="za3">zǎ</span><span data-s="za4">zà</span></td>
+<td class="cell"><span data-s="zai1">zāi</span><span data-s="zai2">zái</span><span data-s="zai3">zǎi</span><span data-s="zai4">zài</span></td>
+<td class="cell"><span data-s="zao1">zāo</span><span data-s="zao2">záo</span><span data-s="zao3">zǎo</span><span data-s="zao4">zào</span></td>
+<td class="cell"><span data-s="zan1">zān</span><span data-s="zan2">zán</span><span data-s="zan3">zǎn</span><span data-s="zan4">zàn</span></td>
+<td class="cell"><span data-s="zang1">zāng</span><span data-s="zang2">záng</span><span data-s="zang3">zǎng</span><span data-s="zang4">zàng</span></td>
+<td class="cell"><span data-s="zo1"> </span></td>
+<td class="cell"><span data-s="zong1">zōng</span><span data-s="zong2">zóng</span><span data-s="zong3">zǒng</span><span data-s="zong4">zòng</span></td>
+<td class="cell"><span data-s="zou1">zōu</span><span data-s="zou2">zóu</span><span data-s="zou3">zǒu</span><span data-s="zou4">zòu</span></td>
+<td class="cell"><span data-s="ze1">zē</span><span data-s="ze2">zé</span><span data-s="ze3">zě</span><span data-s="ze4">zè</span></td>
+<td class="cell"><span data-s="zei1">zēi</span><span data-s="zei2">zéi</span><span data-s="zei3">zěi</span><span data-s="zei4">zèi</span></td>
+<td class="cell"><span data-s="zen1">zēn</span><span data-s="zen2">zén</span><span data-s="zen3">zěn</span><span data-s="zen4">zèn</span></td>
+<td class="cell"><span data-s="zeng1">zēng</span><span data-s="zeng2">zéng</span><span data-s="zeng3">zěng</span><span data-s="zeng4">zèng</span></td>
+<td class="cell"><span data-s="zer1"> </span></td>
+<td class="cell"><span data-s="zi1">zī</span><span data-s="zi2">zí</span><span data-s="zi3">zǐ</span><span data-s="zi4">zì</span></td>
+<td class="cell"><span data-s="zia1"> </span></td>
+<td class="cell"><span data-s="ziao1"> </span></td>
+<td class="cell"><span data-s="zie1"> </span></td>
+<td class="cell"><span data-s="ziou1"> </span></td>
+<td class="cell"><span data-s="zian1"> </span></td>
+<td class="cell"><span data-s="ziang1"> </span></td>
+<td class="cell"><span data-s="zin1"> </span></td>
+<td class="cell"><span data-s="zing1"> </span></td>
+<td class="cell"><span data-s="ziong1"> </span></td>
+<td class="cell"><span data-s="zu1">zū</span><span data-s="zu2">zú</span><span data-s="zu3">zǔ</span><span data-s="zu4">zù</span></td>
+<td class="cell"><span data-s="zua1"> </span></td>
+<td class="cell"><span data-s="zuo1">zuō</span><span data-s="zuo2">zuó</span><span data-s="zuo3">zuǒ</span><span data-s="zuo4">zuò</span></td>
+<td class="cell"><span data-s="zui1">zuī</span><span data-s="zui2">zuí</span><span data-s="zui3">zuǐ</span><span data-s="zui4">zuì</span></td>
+<td class="cell"><span data-s="zuai1"> </span></td>
+<td class="cell"><span data-s="zuan1">zuān</span><span data-s="zuan2">zuán</span><span data-s="zuan3">zuǎn</span><span data-s="zuan4">zuàn</span></td>
+<td class="cell"><span data-s="zun1">zūn</span><span data-s="zun2">zún</span><span data-s="zun3">zǔn</span><span data-s="zun4">zùn</span></td>
+<td class="cell"><span data-s="zuang1">zuāng</span><span data-s="zuang2">zuáng</span><span data-s="zuang3">zuǎng</span><span data-s="zuang4">zuàng</span></td>
+<td class="cell"><span data-s="zueng1"> </span></td>
+<td class="cell"><span data-s="zü1"> </span></td>
+<td class="cell"><span data-s="züe1"> </span></td>
+<td class="cell"><span data-s="züan1"> </span></td>
+<td class="cell"><span data-s="zün1"> </span></td>
+<tr>
+<th>c</th>
+<td class="cell"><span data-s="ca1">cā</span><span data-s="ca2">cá</span><span data-s="ca3">cǎ</span><span data-s="ca4">cà</span></td>
+<td class="cell"><span data-s="cai1">cāi</span><span data-s="cai2">cái</span><span data-s="cai3">cǎi</span><span data-s="cai4">cài</span></td>
+<td class="cell"><span data-s="cao1">cāo</span><span data-s="cao2">cáo</span><span data-s="cao3">cǎo</span><span data-s="cao4">cào</span></td>
+<td class="cell"><span data-s="can1">cān</span><span data-s="can2">cán</span><span data-s="can3">cǎn</span><span data-s="can4">càn</span></td>
+<td class="cell"><span data-s="cang1">cāng</span><span data-s="cang2">cáng</span><span data-s="cang3">cǎng</span><span data-s="cang4">càng</span></td>
+<td class="cell"><span data-s="co1"> </span></td>
+<td class="cell"><span data-s="cong1">cōng</span><span data-s="cong2">cóng</span><span data-s="cong3">cǒng</span><span data-s="cong4">còng</span></td>
+<td class="cell"><span data-s="cou1">cōu</span><span data-s="cou2">cóu</span><span data-s="cou3">cǒu</span><span data-s="cou4">còu</span></td>
+<td class="cell"><span data-s="ce1">cē</span><span data-s="ce2">cé</span><span data-s="ce3">cě</span><span data-s="ce4">cè</span></td>
+<td class="cell"><span data-s="cei1">cēi</span><span data-s="cei2">céi</span><span data-s="cei3">cěi</span><span data-s="cei4">cèi</span></td>
+<td class="cell"><span data-s="cen1">cēn</span><span data-s="cen2">cén</span><span data-s="cen3">cěn</span><span data-s="cen4">cèn</span></td>
+<td class="cell"><span data-s="ceng1">cēng</span><span data-s="ceng2">céng</span><span data-s="ceng3">cěng</span><span data-s="ceng4">cèng</span></td>
+<td class="cell"><span data-s="cer1"> </span></td>
+<td class="cell"><span data-s="ci1">cī</span><span data-s="ci2">cí</span><span data-s="ci3">cǐ</span><span data-s="ci4">cì</span></td>
+<td class="cell"><span data-s="cia1"> </span></td>
+<td class="cell"><span data-s="ciao1"> </span></td>
+<td class="cell"><span data-s="cie1"> </span></td>
+<td class="cell"><span data-s="ciou1"> </span></td>
+<td class="cell"><span data-s="cian1"> </span></td>
+<td class="cell"><span data-s="ciang1"> </span></td>
+<td class="cell"><span data-s="cin1"> </span></td>
+<td class="cell"><span data-s="cing1"> </span></td>
+<td class="cell"><span data-s="ciong1"> </span></td>
+<td class="cell"><span data-s="cu1">cū</span><span data-s="cu2">cú</span><span data-s="cu3">cǔ</span><span data-s="cu4">cù</span></td>
+<td class="cell"><span data-s="cua1">cuā</span><span data-s="cua2">cuá</span><span data-s="cua3">cuǎ</span><span data-s="cua4">cuà</span></td>
+<td class="cell"><span data-s="cuo1">cuō</span><span data-s="cuo2">cuó</span><span data-s="cuo3">cuǒ</span><span data-s="cuo4">cuò</span></td>
+<td class="cell"><span data-s="cui1">cuī</span><span data-s="cui2">cuí</span><span data-s="cui3">cuǐ</span><span data-s="cui4">cuì</span></td>
+<td class="cell"><span data-s="cuai1">cuāi</span><span data-s="cuai2">cuái</span><span data-s="cuai3">cuǎi</span><span data-s="cuai4">cuài</span></td>
+<td class="cell"><span data-s="cuan1">cuān</span><span data-s="cuan2">cuán</span><span data-s="cuan3">cuǎn</span><span data-s="cuan4">cuàn</span></td>
+<td class="cell"><span data-s="cun1">cūn</span><span data-s="cun2">cún</span><span data-s="cun3">cǔn</span><span data-s="cun4">cùn</span></td>
+<td class="cell"><span data-s="cuang1">cuāng</span><span data-s="cuang2">cuáng</span><span data-s="cuang3">cuǎng</span><span data-s="cuang4">cuàng</span></td>
+<td class="cell"><span data-s="cueng1"> </span></td>
+<td class="cell"><span data-s="cü1"> </span></td>
+<td class="cell"><span data-s="cüe1"> </span></td>
+<td class="cell"><span data-s="cüan1"> </span></td>
+<td class="cell"><span data-s="cün1"> </span></td>
+<tr>
+<th>s</th>
+<td class="cell"><span data-s="sa1">sā</span><span data-s="sa2">sá</span><span data-s="sa3">sǎ</span><span data-s="sa4">sà</span></td>
+<td class="cell"><span data-s="sai1">sāi</span><span data-s="sai2">sái</span><span data-s="sai3">sǎi</span><span data-s="sai4">sài</span></td>
+<td class="cell"><span data-s="sao1">sāo</span><span data-s="sao2">sáo</span><span data-s="sao3">sǎo</span><span data-s="sao4">sào</span></td>
+<td class="cell"><span data-s="san1">sān</span><span data-s="san2">sán</span><span data-s="san3">sǎn</span><span data-s="san4">sàn</span></td>
+<td class="cell"><span data-s="sang1">sāng</span><span data-s="sang2">sáng</span><span data-s="sang3">sǎng</span><span data-s="sang4">sàng</span></td>
+<td class="cell"><span data-s="so1"> </span></td>
+<td class="cell"><span data-s="song1">sōng</span><span data-s="song2">sóng</span><span data-s="song3">sǒng</span><span data-s="song4">sòng</span></td>
+<td class="cell"><span data-s="sou1">sōu</span><span data-s="sou2">sóu</span><span data-s="sou3">sǒu</span><span data-s="sou4">sòu</span></td>
+<td class="cell"><span data-s="se1">sē</span><span data-s="se2">sé</span><span data-s="se3">sě</span><span data-s="se4">sè</span></td>
+<td class="cell"><span data-s="sei1">sēi</span><span data-s="sei2">séi</span><span data-s="sei3">sěi</span><span data-s="sei4">sèi</span></td>
+<td class="cell"><span data-s="sen1">sēn</span><span data-s="sen2">sén</span><span data-s="sen3">sěn</span><span data-s="sen4">sèn</span></td>
+<td class="cell"><span data-s="seng1">sēng</span><span data-s="seng2">séng</span><span data-s="seng3">sěng</span><span data-s="seng4">sèng</span></td>
+<td class="cell"><span data-s="ser1"> </span></td>
+<td class="cell"><span data-s="si1">sī</span><span data-s="si2">sí</span><span data-s="si3">sǐ</span><span data-s="si4">sì</span></td>
+<td class="cell"><span data-s="sia1"> </span></td>
+<td class="cell"><span data-s="siao1"> </span></td>
+<td class="cell"><span data-s="sie1"> </span></td>
+<td class="cell"><span data-s="siou1"> </span></td>
+<td class="cell"><span data-s="sian1"> </span></td>
+<td class="cell"><span data-s="siang1"> </span></td>
+<td class="cell"><span data-s="sin1"> </span></td>
+<td class="cell"><span data-s="sing1"> </span></td>
+<td class="cell"><span data-s="siong1"> </span></td>
+<td class="cell"><span data-s="su1">sū</span><span data-s="su2">sú</span><span data-s="su3">sǔ</span><span data-s="su4">sù</span></td>
+<td class="cell"><span data-s="sua1">suā</span><span data-s="sua2">suá</span><span data-s="sua3">suǎ</span><span data-s="sua4">suà</span></td>
+<td class="cell"><span data-s="suo1">suō</span><span data-s="suo2">suó</span><span data-s="suo3">suǒ</span><span data-s="suo4">suò</span></td>
+<td class="cell"><span data-s="sui1">suī</span><span data-s="sui2">suí</span><span data-s="sui3">suǐ</span><span data-s="sui4">suì</span></td>
+<td class="cell"><span data-s="suai1">suāi</span><span data-s="suai2">suái</span><span data-s="suai3">suǎi</span><span data-s="suai4">suài</span></td>
+<td class="cell"><span data-s="suan1">suān</span><span data-s="suan2">suán</span><span data-s="suan3">suǎn</span><span data-s="suan4">suàn</span></td>
+<td class="cell"><span data-s="sun1">sūn</span><span data-s="sun2">sún</span><span data-s="sun3">sǔn</span><span data-s="sun4">sùn</span></td>
+<td class="cell"><span data-s="suang1">suāng</span><span data-s="suang2">suáng</span><span data-s="suang3">suǎng</span><span data-s="suang4">suàng</span></td>
+<td class="cell"><span data-s="sueng1"> </span></td>
+<td class="cell"><span data-s="sü1"> </span></td>
+<td class="cell"><span data-s="süe1">suē</span><span data-s="süe2">sué</span><span data-s="süe3">suě</span><span data-s="süe4">suè</span></td>
+<td class="cell"><span data-s="süan1">suān</span><span data-s="süan2">suán</span><span data-s="süan3">suǎn</span><span data-s="süan4">suàn</span></td>
+<td class="cell"><span data-s="sün1">sūn</span><span data-s="sün2">sún</span><span data-s="sün3">sǔn</span><span data-s="sün4">sùn</span></td>
+<tr>
+<th>f</th>
+<td class="cell"><span data-s="fa1">fā</span><span data-s="fa2">fá</span><span data-s="fa3">fǎ</span><span data-s="fa4">fà</span></td>
+<td class="cell"><span data-s="fai1"> </span></td>
+<td class="cell"><span data-s="fao1"> </span></td>
+<td class="cell"><span data-s="fan1">fān</span><span data-s="fan2">fán</span><span data-s="fan3">fǎn</span><span data-s="fan4">fàn</span></td>
+<td class="cell"><span data-s="fang1">fāng</span><span data-s="fang2">fáng</span><span data-s="fang3">fǎng</span><span data-s="fang4">fàng</span></td>
+<td class="cell"><span data-s="fo1"> </span></td>
+<td class="cell"><span data-s="fong1"> </span></td>
+<td class="cell"><span data-s="fou1"> </span></td>
+<td class="cell"><span data-s="fe1">fē</span><span data-s="fe2">fé</span><span data-s="fe3">fě</span><span data-s="fe4">fè</span></td>
+<td class="cell"><span data-s="fei1">fēi</span><span data-s="fei2">féi</span><span data-s="fei3">fěi</span><span data-s="fei4">fèi</span></td>
+<td class="cell"><span data-s="fen1">fēn</span><span data-s="fen2">fén</span><span data-s="fen3">fěn</span><span data-s="fen4">fèn</span></td>
+<td class="cell"><span data-s="feng1">fēng</span><span data-s="feng2">féng</span><span data-s="feng3">fěng</span><span data-s="feng4">fèng</span></td>
+<td class="cell"><span data-s="fer1"> </span></td>
+<td class="cell"><span data-s="fi1"> </span></td>
+<td class="cell"><span data-s="fia1"> </span></td>
+<td class="cell"><span data-s="fiao1"> </span></td>
+<td class="cell"><span data-s="fie1"> </span></td>
+<td class="cell"><span data-s="fiou1"> </span></td>
+<td class="cell"><span data-s="fian1"> </span></td>
+<td class="cell"><span data-s="fiang1"> </span></td>
+<td class="cell"><span data-s="fin1"> </span></td>
+<td class="cell"><span data-s="fing1"> </span></td>
+<td class="cell"><span data-s="fiong1"> </span></td>
+<td class="cell"><span data-s="fu1">fū</span><span data-s="fu2">fú</span><span data-s="fu3">fǔ</span><span data-s="fu4">fù</span></td>
+<td class="cell"><span data-s="fua1"> </span></td>
+<td class="cell"><span data-s="fuo1">fuō</span><span data-s="fuo2">fuó</span><span data-s="fuo3">fuǒ</span><span data-s="fuo4">fuò</span></td>
+<td class="cell"><span data-s="fui1">fūi</span><span data-s="fui2">fúi</span><span data-s="fui3">fǔi</span><span data-s="fui4">fùi</span></td>
+<td class="cell"><span data-s="fuai1"> </span></td>
+<td class="cell"><span data-s="fuan1"> </span></td>
+<td class="cell"><span data-s="fun1">fūn</span><span data-s="fun2">fún</span><span data-s="fun3">fǔn</span><span data-s="fun4">fùn</span></td>
+<td class="cell"><span data-s="fuang1"> </span></td>
+<td class="cell"><span data-s="fueng1"> </span></td>
+<td class="cell"><span data-s="fü1"> </span></td>
+<td class="cell"><span data-s="füe1"> </span></td>
+<td class="cell"><span data-s="füan1"> </span></td>
+<td class="cell"><span data-s="fün1"> </span></td>
+<tr>
+<th>m</th>
+<td class="cell"><span data-s="ma1">mā</span><span data-s="ma2">má</span><span data-s="ma3">mǎ</span><span data-s="ma4">mà</span></td>
+<td class="cell"><span data-s="mai1">māi</span><span data-s="mai2">mái</span><span data-s="mai3">mǎi</span><span data-s="mai4">mài</span></td>
+<td class="cell"><span data-s="mao1">māo</span><span data-s="mao2">máo</span><span data-s="mao3">mǎo</span><span data-s="mao4">mào</span></td>
+<td class="cell"><span data-s="man1">mān</span><span data-s="man2">mán</span><span data-s="man3">mǎn</span><span data-s="man4">màn</span></td>
+<td class="cell"><span data-s="mang1">māng</span><span data-s="mang2">máng</span><span data-s="mang3">mǎng</span><span data-s="mang4">màng</span></td>
+<td class="cell"><span data-s="mo1">mō</span><span data-s="mo2">mó</span><span data-s="mo3">mǒ</span><span data-s="mo4">mò</span></td>
+<td class="cell"><span data-s="mong1">mōng</span><span data-s="mong2">móng</span><span data-s="mong3">mǒng</span><span data-s="mong4">mòng</span></td>
+<td class="cell"><span data-s="mou1">mōu</span><span data-s="mou2">móu</span><span data-s="mou3">mǒu</span><span data-s="mou4">mòu</span></td>
+<td class="cell"><span data-s="me1">mē</span><span data-s="me2">mé</span><span data-s="me3">mě</span><span data-s="me4">mè</span></td>
+<td class="cell"><span data-s="mei1">mēi</span><span data-s="mei2">méi</span><span data-s="mei3">měi</span><span data-s="mei4">mèi</span></td>
+<td class="cell"><span data-s="men1">mēn</span><span data-s="men2">mén</span><span data-s="men3">měn</span><span data-s="men4">mèn</span></td>
+<td class="cell"><span data-s="meng1">mēng</span><span data-s="meng2">méng</span><span data-s="meng3">měng</span><span data-s="meng4">mèng</span></td>
+<td class="cell"><span data-s="mer1"> </span></td>
+<td class="cell"><span data-s="mi1">mī</span><span data-s="mi2">mí</span><span data-s="mi3">mǐ</span><span data-s="mi4">mì</span></td>
+<td class="cell"><span data-s="mia1">miā</span><span data-s="mia2">miá</span><span data-s="mia3">miǎ</span><span data-s="mia4">mià</span></td>
+<td class="cell"><span data-s="miao1">miāo</span><span data-s="miao2">miáo</span><span data-s="miao3">miǎo</span><span data-s="miao4">miào</span></td>
+<td class="cell"><span data-s="mie1">miē</span><span data-s="mie2">mié</span><span data-s="mie3">miě</span><span data-s="mie4">miè</span></td>
+<td class="cell"><span data-s="miou1"> </span></td>
+<td class="cell"><span data-s="mian1">miān</span><span data-s="mian2">mián</span><span data-s="mian3">miǎn</span><span data-s="mian4">miàn</span></td>
+<td class="cell"><span data-s="miang1">miāng</span><span data-s="miang2">miáng</span><span data-s="miang3">miǎng</span><span data-s="miang4">miàng</span></td>
+<td class="cell"><span data-s="min1">mīn</span><span data-s="min2">mín</span><span data-s="min3">mǐn</span><span data-s="min4">mìn</span></td>
+<td class="cell"><span data-s="ming1">mīng</span><span data-s="ming2">míng</span><span data-s="ming3">mǐng</span><span data-s="ming4">mìng</span></td>
+<td class="cell"><span data-s="miong1">miōng</span><span data-s="miong2">mióng</span><span data-s="miong3">miǒng</span><span data-s="miong4">miòng</span></td>
+<td class="cell"><span data-s="mu1">mū</span><span data-s="mu2">mú</span><span data-s="mu3">mǔ</span><span data-s="mu4">mù</span></td>
+<td class="cell"><span data-s="mua1"> </span></td>
+<td class="cell"><span data-s="muo1">muō</span><span data-s="muo2">muó</span><span data-s="muo3">muǒ</span><span data-s="muo4">muò</span></td>
+<td class="cell"><span data-s="mui1">muī</span><span data-s="mui2">muí</span><span data-s="mui3">muǐ</span><span data-s="mui4">muì</span></td>
+<td class="cell"><span data-s="muai1">muāi</span><span data-s="muai2">muái</span><span data-s="muai3">muǎi</span><span data-s="muai4">muài</span></td>
+<td class="cell"><span data-s="muan1">muān</span><span data-s="muan2">muán</span><span data-s="muan3">muǎn</span><span data-s="muan4">muàn</span></td>
+<td class="cell"><span data-s="mun1">mūn</span><span data-s="mun2">mún</span><span data-s="mun3">mǔn</span><span data-s="mun4">mùn</span></td>
+<td class="cell"><span data-s="muang1">muāng</span><span data-s="muang2">muáng</span><span data-s="muang3">muǎng</span><span data-s="muang4">muàng</span></td>
+<td class="cell"><span data-s="mueng1"> </span></td>
+<td class="cell"><span data-s="mü1"> </span></td>
+<td class="cell"><span data-s="müe1">muē</span><span data-s="müe2">mué</span><span data-s="müe3">muě</span><span data-s="müe4">muè</span></td>
+<td class="cell"><span data-s="müan1">muān</span><span data-s="müan2">muán</span><span data-s="müan3">muǎn</span><span data-s="müan4">muàn</span></td>
+<td class="cell"><span data-s="mün1">mūn</span><span data-s="mün2">mún</span><span data-s="mün3">mǔn</span><span data-s="mün4">mùn</span></td>
+<tr>
+<th>y</th>
+<td class="cell"><span data-s="ya1">yā</span><span data-s="ya2">yá</span><span data-s="ya3">yǎ</span><span data-s="ya4">yà</span></td>
+<td class="cell"><span data-s="yai1"> </span></td>
+<td class="cell"><span data-s="yao1">yāo</span><span data-s="yao2">yáo</span><span data-s="yao3">yǎo</span><span data-s="yao4">yào</span></td>
+<td class="cell"><span data-s="yan1">yān</span><span data-s="yan2">yán</span><span data-s="yan3">yǎn</span><span data-s="yan4">yàn</span></td>
+<td class="cell"><span data-s="yang1">yāng</span><span data-s="yang2">yáng</span><span data-s="yang3">yǎng</span><span data-s="yang4">yàng</span></td>
+<td class="cell"><span data-s="yo1"> </span></td>
+<td class="cell"><span data-s="yong1">yōng</span><span data-s="yong2">yóng</span><span data-s="yong3">yǒng</span><span data-s="yong4">yòng</span></td>
+<td class="cell"><span data-s="you1">yōu</span><span data-s="you2">yóu</span><span data-s="you3">yǒu</span><span data-s="you4">yòu</span></td>
+<td class="cell"><span data-s="ye1">yē</span><span data-s="ye2">yé</span><span data-s="ye3">yě</span><span data-s="ye4">yè</span></td>
+<td class="cell"><span data-s="yei1"> </span></td>
+<td class="cell"><span data-s="yen1"> </span></td>
+<td class="cell"><span data-s="yeng1"> </span></td>
+<td class="cell"><span data-s="yer1"> </span></td>
+<td class="cell"><span data-s="yi1">yī</span><span data-s="yi2">yí</span><span data-s="yi3">yǐ</span><span data-s="yi4">yì</span></td>
+<td class="cell"><span data-s="yia1"> </span></td>
+<td class="cell"><span data-s="yiao1">yiāo</span><span data-s="yiao2">yiáo</span><span data-s="yiao3">yiǎo</span><span data-s="yiao4">yiào</span></td>
+<td class="cell"><span data-s="yie1">yiē</span><span data-s="yie2">yié</span><span data-s="yie3">yiě</span><span data-s="yie4">yiè</span></td>
+<td class="cell"><span data-s="yiou1"> </span></td>
+<td class="cell"><span data-s="yian1">yiān</span><span data-s="yian2">yián</span><span data-s="yian3">yiǎn</span><span data-s="yian4">yiàn</span></td>
+<td class="cell"><span data-s="yiang1">yiāng</span><span data-s="yiang2">yiáng</span><span data-s="yiang3">yiǎng</span><span data-s="yiang4">yiàng</span></td>
+<td class="cell"><span data-s="yin1">yīn</span><span data-s="yin2">yín</span><span data-s="yin3">yǐn</span><span data-s="yin4">yìn</span></td>
+<td class="cell"><span data-s="ying1">yīng</span><span data-s="ying2">yíng</span><span data-s="ying3">yǐng</span><span data-s="ying4">yìng</span></td>
+<td class="cell"><span data-s="yiong1">yiōng</span><span data-s="yiong2">yióng</span><span data-s="yiong3">yiǒng</span><span data-s="yiong4">yiòng</span></td>
+<td class="cell"><span data-s="yu1">yū</span><span data-s="yu2">yú</span><span data-s="yu3">yǔ</span><span data-s="yu4">yù</span></td>
+<td class="cell"><span data-s="yua1"> </span></td>
+<td class="cell"><span data-s="yuo1">yuō</span><span data-s="yuo2">yuó</span><span data-s="yuo3">yuǒ</span><span data-s="yuo4">yuò</span></td>
+<td class="cell"><span data-s="yui1">yuī</span><span data-s="yui2">yuí</span><span data-s="yui3">yuǐ</span><span data-s="yui4">yuì</span></td>
+<td class="cell"><span data-s="yuai1"> </span></td>
+<td class="cell"><span data-s="yuan1">yuān</span><span data-s="yuan2">yuán</span><span data-s="yuan3">yuǎn</span><span data-s="yuan4">yuàn</span></td>
+<td class="cell"><span data-s="yun1">yūn</span><span data-s="yun2">yún</span><span data-s="yun3">yǔn</span><span data-s="yun4">yùn</span></td>
+<td class="cell"><span data-s="yuang1"> </span></td>
+<td class="cell"><span data-s="yueng1"> </span></td>
+<td class="cell"><span data-s="yü1">yǖ</span><span data-s="yü2">yǘ</span><span data-s="yü3">yǚ</span><span data-s="yü4">yǜ</span></td>
+<td class="cell"><span data-s="yüe1">yuē</span><span data-s="yüe2">yué</span><span data-s="yüe3">yuě</span><span data-s="yüe4">yuè</span></td>
+<td class="cell"><span data-s="yüan1">yuān</span><span data-s="yüan2">yuán</span><span data-s="yüan3">yuǎn</span><span data-s="yüan4">yuàn</span></td>
+<td class="cell"><span data-s="yün1">yūn</span><span data-s="yün2">yún</span><span data-s="yün3">yǔn</span><span data-s="yün4">yùn</span></td>
+<tr></tr>
+</table>
+</div>
+
+<audio id="player"></audio>
+<script>
+const player = document.getElementById('player');
+document.querySelectorAll('.cell span').forEach(el => {
+  el.onclick = () => {
+    player.src = 'audio/' + el.dataset.s + '.mp3';
+    player.play();
+  };
+});
+</script>
+</body>
+</html>
